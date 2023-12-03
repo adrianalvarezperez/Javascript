@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+
+  <script type="text/javascript">
+
+
+      class Figura{
+
+
+              //PROPIEDADES
+              #coordenadasX;
+              #coordenadasY;
+              ancho;
+              alto;
+              #tipo;
+
+//--------------------------------------------------------------------------------------------------->
+
+              //CONSTRUCTOR
+              constructor(coordenadasX,coordenadasY,ancho,alto,tipo){
+                  this.#coordenadasX = coordenadasX;
+                  this.#coordenadasY = coordenadasY;
+                  this.ancho = ancho;
+                  this.alto = alto;
+                  this.#tipo = tipo;
+              }
+
+//--------------------------------------------------------------------------------------------------->
+
+              //MÉTODOS GETTER ---> IMPRIMEN DATOS
+              get getX(){
+                  return this.#coordenadasX;
+              }
+              get getY(){
+                  return this.#coordenadasY;
+              }
+              get getAncho(){
+                  return this.ancho;
+              }
+              get getAlto(){
+                  return this.alto;
+              }
+
+//--------------------------------------------------------------------------------------------------->
+
+              //MÉTODO PARA IMPRIMIR DATOS
+              toString(){
+                  return "FIGURA ----> <br>CoordenadasX= "+this.#coordenadasX+"<br>CoordenadasY= "+this.#coordenadasY+"<br>Ancho= "+this.ancho+"<br>Alto= "+this.alto+"<br>Tipo= "+this.#tipo;
+              }
+      }
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+              class Rectangulo extends Figura{          //"Rectangulo" HEREDA DE "Figura"
+
+
+                    #base;
+                    #altura;
+
+
+                    constructor(coordenadasX,coordenadasY,ancho,alto,base,altura){
+                        super(coordenadasX,coordenadasY,ancho,alto,"Rectangulo");      //HEREDAMOS EL CONSTRUCTOR DE "Figura"
+
+                        this.#base = base;
+                        this.#altura = altura;
+                    }
+
+//--------------------------------------------------------------------------------------------------->
+
+                    area(){
+                        return this.alto * this.ancho;          //SE PUEDE ACCEDER SIN MAS PORQUE SON PUBLICOS
+                    }
+
+
+
+                  /*  area2(){            //NO SE PUEDE PORQUE SON PRIVADOS. SOLO SE PUEDE DENTRO DE LA MISMA CLASE
+                        return this.#coordenadasY * this.#coordenadasX;
+                    }
+                  */
+
+                    area3(){
+                        return super.getX * super.getY;    //A LOS METODOS DE "Figura" LOS LLAMAMOS CON "SUPER"
+                    }
+
+                    area4(){
+                        return super.getAlto * super.getAncho;
+                    }
+
+                    toString2(){                      //HEREDA EL METODO DE "Figura"  MAS BASE Y ALTURA
+                      return super.toString()+"<br>Base: "+this.#base+"<br>Altura: "+this.#altura;
+                    }
+
+              }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+                  var fig= new Figura(7,3,4,2,"Hexagono");
+                  document.write(fig.toString());                          //IMPRIMIMOS EL TO_STRING DE "Figura"
+
+
+
+
+                  var rec= new Rectangulo(16,83,47,1,12,23);
+                  rec.alto=567;                                            //CAMBIAMOS EL VALOR A ALTO A SIN SIN MAS AL SER PUBLICO
+                  document.write("<br><br><br><br>"+rec.toString());
+
+
+
+                  document.write("<br><br><br><br>"+rec.area3());         //LLAMA A LOS METODOS DE "Figura"
+                  document.write("<br><br><br><br>"+rec.area4());         //LLAMA A LOS METODOS DE "Figura"
+
+
+
+                  document.write("<br><br><br><br>"+rec.toString2());     //HEREDA EL TO_STRING DE "Figura"  MAS BASE Y ALTURA
+
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

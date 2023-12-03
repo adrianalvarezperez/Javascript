@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+  <script type="text/javascript">
+
+
+                    class Coche {
+
+
+                          //PROPIEDADES
+                          #matricula;
+                          #marca;
+                          #modelo;
+
+//--------------------------------------------------------------------------------------------------->
+
+                          //CONSTRUCTOR
+                          constructor(matricula,marca,modelo){
+                              this.#matricula = matricula;
+                              this.#marca = marca;
+                              this.#modelo = modelo;
+                          }
+
+//--------------------------------------------------------------------------------------------------->
+
+                          //MÉTODO PARA IMPRIMIR POR PANTALLA LOS DATOS
+                          toString(){
+                              return "MATRICULA: "+this.#matricula +" ----> MARCA: "+ this.#marca +" ----> MODELO: "+ this.#modelo;
+                          }
+                    }
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+                class Garaje{
+
+
+                            //PROPIEDADES
+                            #domicilio;
+                            #plazas;
+
+
+
+
+                            //CONSTRUCTOR
+                            constructor(domicilio){
+                                this.#domicilio = domicilio;
+                                this.#plazas= new Coche(20);
+                            }
+
+
+
+                            //MÉTODOS
+                            domicilio(){
+                                return this.#domicilio;
+                            }
+
+
+                            verGaraje(){
+                                var texto= "<br>El garaje con domicilio en " +this.#domicilio+ " tiene las siguientes plazas: ";
+                                texto = texto.concat("<br>");
+
+                                for (var i=0; i<20; i++) {
+                                    texto = texto.concat("  Plaza nº " + i + ": ");
+                                    var estado = (this.#plazas[i] == null) ? "Libre" : this.#plazas[i].toString();
+                                    estado = estado.concat("<br>");
+                                    texto = texto.concat(estado);
+                                }
+
+                                return texto;
+                            }
+
+
+                            aparcar(coche){
+                                  var i= 0;
+                            		  while (!(this.#plazas[i] == null)) {
+                            			  i++;
+                            	  	}
+
+                            		  if (i<20) {
+                            		  	  this.#plazas[i] = coche;
+                            			    return i;
+                            		  } else {
+                            			    return -1;
+                            		}
+                            }
+
+                            desaparcar(numPlaza){
+                              if (this.#plazas[numPlaza] == null) {
+                              			  return null;
+                              		} else {
+                              			var c = this.#plazas[numPlaza];
+                              			this.#plazas[numPlaza] = null;
+                              			return c;
+                                  }
+                            }
+                }
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+                              var g1= new Garaje("Calle Oca, 54");
+
+
+                              var c1 = new Coche("5544MJK", "SUZUKI", "IGNIS");
+  	                        	var c2 = new Coche("4455ABC", "FORD", "FIESTA");
+  		                        var c3 = new Coche("3344AJA", "RENAULT", "25");
+
+
+                              var numPlaza = g1.aparcar(c1);
+                              document.write("Un coche ha aparcado en la plaza " + numPlaza);
+
+                              numPlaza = g1.aparcar(c2);
+                              document.write("<br>Un coche ha aparcado en la plaza " + numPlaza);
+
+                              numPlaza = g1.aparcar(c3);
+                              document.write("<br>Un coche ha aparcado en la plaza " + numPlaza);
+
+
+                              document.write(g1.verGaraje());
+
+                              var unCoche = g1.desaparcar(1);
+                              document.write("El " + unCoche.toString() + " ha salido del garaje");
+                              document.write(g1.verGaraje());
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

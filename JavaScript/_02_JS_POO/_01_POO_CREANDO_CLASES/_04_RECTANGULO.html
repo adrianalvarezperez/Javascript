@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+  <script type="text/javascript">
+
+
+              class Rectangulo{
+
+
+                      //PROPIEDADES O ATRIBUTOS
+                      static descripcion= "Figuritas";      //PROPIEDAD ESTATICA ACCESIBLE DESDE LA "CLASE.NOMBRE" DESDE CUALQUIER SITIO
+                      #ancho;
+                      #alto;
+
+//--------------------------------------------------------------------------------------------------->
+
+                      //CONSTRUCTOR
+                      constructor(descripcion,ancho,alto){
+                        this.descripcion=descripcion;
+                        this.#ancho=ancho;
+                        this.#alto=alto;
+                      }
+
+//--------------------------------------------------------------------------------------------------->
+
+                      //MÉTODO SETTER ----> CAMBIA EL VALOR
+                      set descri(descripcion){
+                          this.descripcion=descripcion;
+                      }
+
+//--------------------------------------------------------------------------------------------------->
+
+                      //MÉTODOS CON RETORNO
+                      area(){
+                        return "EL AREA DEL RECTANGULO ES ----> "+this.#ancho * this.#alto;
+                      }
+
+
+                      toString(){
+                        return "RECTANGULO ----> "+this.descripcion+"Ancho: "+this.#ancho+" ---- ALTO: "+this.#alto;
+                      }
+
+            }
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+                    var r1= new Rectangulo("Figura de 4 lados ----> ",20,20);    //CREAMOS OBJETO O INSTANCIA
+
+
+                    document.write(r1.toString());
+                    document.write("<br>"+r1.area());
+
+
+                    document.write("<br>"+Rectangulo.descripcion);                //"FIGURITAS"
+
+
+                    Rectangulo.descripcion="Buenas";                              //CAMBIAMOS VALOR DE "FIGURITAS" A "BUENAS" EN LA CLASE
+                    document.write("<br>"+Rectangulo.descripcion);                //"BUENAS"
+                    document.write("<br>"+r1.toString());                         //COGE LO DE LA INSTANCIA DE "DESCRIPTCION" ----> FIGURA DE 4 LADOS
+
+
+                    r1.descri="Buenas ";                                          //MODIFICAMOS LA INSTANCIA POR "BUENAS"
+                    document.write("<br>"+r1.toString());                         //AHORA SI SACA LA DESCRIPCION CON "BUENAS"
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

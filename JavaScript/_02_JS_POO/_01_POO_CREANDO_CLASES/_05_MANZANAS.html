@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+          class Manzanas{
+
+
+                  //PROPIEDADES
+                  #tipo;
+
+//--------------------------------------------------------------------------------------------------->
+
+                  //CONSTRUCTOR
+                  constructor(tipo){
+                      this.#tipo = tipo;
+                  }
+
+//--------------------------------------------------------------------------------------------------->
+
+                  //MÉTODO SETTER  --->  CAMBIAN EL VALOR
+                  set tipo(tipo){
+                      this.#tipo = tipo;
+                  }
+
+
+
+                  //MÉTODO GETTER  ---->  IMPRIMEN
+                  get tipo(){
+                      return this.#tipo;
+                  }
+        }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+                var man1= new Manzanas("Golden red");
+                var man2= man1;
+
+                                                              //A LOS SETTER Y GETTER SE ACCEDE SIN PARENTESIS
+                document.write(man1.tipo);                    //GOLDEN RED
+                document.write("<br>"+man2.tipo);             //GOLDEN RED
+
+
+
+                man2.tipo="Manzanas en almibar";              //A LOS SETTER SE CAMBIA EL VALOR SIN PARENTESIS
+                document.write("<br>"+man1.tipo);             //MANZANAS EN ALMIBAR
+                document.write("<br>"+man2.tipo);             //MANZANAS EN ALMIBAR
+
+
+
+                man1.tipo="Peras";                            //A LOS SETTER SE CAMBIA EL VALOR SIN PARENTESIS
+                document.write("<br>"+man1.tipo);             //PERAS
+                document.write("<br>"+man2.tipo);             //PERAS
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+  <script type="text/javascript">
+
+
+      class Persona {
+
+
+
+            //PROPIEDADES O ATRIBUTOS  ---->  PUBLICOS SIN NADA, PRIVADOS CON #, ESTATICOS CON STATIC
+            #dni;
+            #nombre;
+            #edad;
+
+
+            static numPersonas= 0;    //ATRIBUTO ESTATICO SE ACCEDE A ELLOS A TRAVES DE SU "CLASE.NOMBRE" TANTO "DENTRO" DE LA CLASE, COMO "FUERA"
+                                      //A ESTE NO LE HACE FALTA NI CONSTRUCTOR, NI SETTER, NI GETTER
+
+//--------------------------------------------------------------------------------------------------->
+
+            //CONSTRUCTOR ----> SOLO PODEMOS TENER UNO
+            constructor(dni,nombre,edad){
+                this.dni= dni;
+                this.nombre= nombre;
+                this.edad= edad;
+            }
+
+
+//--------------------------------------------------------------------------------------------------->
+
+            //MÉTODOS SETTER ----> CAMBIAMOS EL VALOR Y LO GUARDAMOS
+            set dni(dni){
+                this.#dni= dni;
+            }
+            set nombre(nombre){
+                this.#nombre= nombre;
+            }
+            set edad(edad){
+                this.#edad= edad;
+            }
+
+
+
+
+
+            //MÉTODOS GETTER ----> IMPRIMEN POR PANTALLA
+            get dni(){
+                return this.#dni;
+            }
+            get nombre(){
+                return this.#nombre;
+            }
+            get edad(){
+                return this.#edad;
+            }
+
+
+//--------------------------------------------------------------------------------------------------->
+
+
+            //MÉTODOS
+            imprimeSaludo(){
+                return "Mi DNI es ----> " +this.#dni+ "<br>HOLA ME LLAMO ----> " +this.#nombre+ " y tengo " +this.#edad+ " años..."+Persona.numPersonas;
+            }
+    }
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            //CREAMOS EL OBJETO O INSTANCIA
+            var persona1= new Persona("72374614P","Veleros",31);
+            var persona2= new Persona();
+
+
+
+            document.write(persona1.dni);              //OJO!!! NO SE ACCEDE COMO EN JAVA SOLO EN LOS SETTER Y GETTER ---->  "persona1.dni()"
+            persona2.dni="23344567L";                  //Y PARA MODIFICAR CON ="..."
+            document.write("<br>"+persona2.dni)        //SOLO EN GET Y SET. EN MÉTODOS NORMALES CON ()
+
+
+//--------------------------------------------------------------------------------------------------->
+
+
+            document.write("<br><br><br><br>"+persona1.nombre);
+            persona2.nombre= "Pirolas";
+            document.write("<br>"+persona2.nombre);
+
+
+//--------------------------------------------------------------------------------------------------->
+
+
+            document.write("<br><br><br><br>"+persona1.edad);
+            persona2.edad= 154;
+            document.write("<br>"+persona2.edad);
+
+
+//--------------------------------------------------------------------------------------------------->
+
+
+            document.write("<br><br><br><br>"+persona1.imprimeSaludo());  //LOS METODOS SIN SETTER Y GETTER  ---->  "persona1.imprimeSaludo();"
+            document.write("<br><br><br><br>"+persona2.imprimeSaludo());
+
+
+//--------------------------------------------------------------------------------------------------->
+
+
+            persona1.nombre= "Trakablasi";                              //CAMBIAMOS EL NOMBRE AL QUE YA TIENE
+            document.write("<br><br><br><br>"+persona1.nombre);
+
+
+//--------------------------------------------------------------------------------------------------->
+
+
+            Persona.numPersonas= 250;                 //CAMBIAMOS VALOR ACCEDIENDO DIRECTAMENTE DESDE LA "CLASE.NOMBRE" AL SER "ESTATICO"
+            document.write("<br>"+Persona.numPersonas+" personas");
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

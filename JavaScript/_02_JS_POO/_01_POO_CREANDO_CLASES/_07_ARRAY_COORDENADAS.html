@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+
+          class Punto{
+
+
+                    //PROPIEDADES
+                    #x;
+                    #y;
+
+//--------------------------------------------------------------------------------------------------->
+
+                    //CONSTRUCTOR
+                    constructor(x,y){
+                        this.#x = x;
+                        this.#y = y;
+                    }
+
+
+                    /*constructor(){
+                        this.#x= 18;
+                        this.#y= 54;
+                    }*/
+
+//--------------------------------------------------------------------------------------------------->
+
+                    toString(){
+                        return "EL PUNTO ESTA EN COORDENADAS "+this.#x+"."+this.#y;
+                    }
+          }
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+                    var vec= new Array();                                        //INSTANCIA DE ARRAY VACIO
+
+
+                    vec[0]= new Punto(2,3);
+                    vec[1]= new Punto(7,4);
+
+
+                    for(var i=0;i<vec.length;i++){                              //LO RECORREMOS CON BUCLE
+                      document.write(vec[i]+" ----> ");
+                    }
+                    document.write("<br>"+vec);                                 //LO SACAMOS SOLO CON VEC
+                    document.write("<br>"+vec[0].toString());                   //POR POSICIONES
+                    document.write("<br>"+vec[1].toString());                   //POR POSICIONES
+
+
+//--------------------------------------------------------------------------------------------------->
+
+
+                    var vec2= new Punto(34, 78);                                 //AUN PASANDO POR PARAMETROS EN EL SEGUNDO CONSTRUCTOR INTERPRETA QUE NO HAY NADA
+                    document.write("<br><br><br><br>"+vec2.toString());          //IMPRIME "18.54"
+
+//--------------------------------------------------------------------------------------------------->
+
+                    var vec3= new Punto(87,2635);
+                    document.write("<br><br><br><br>"+vec3.toString());          //ESTE LO HACEMOS CON EL CONSTRUCTOR PRIMERO
+
+//--------------------------------------------------------------------------------------------------->
+
+                    var vec4= new Punto();
+                    document.write("<br><br><br><br>"+vec4.toString());          //EN EL PRIMER CONSTRUCTOR DA "INDEFINDO"
+
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

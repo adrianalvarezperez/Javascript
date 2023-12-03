@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+
+                    class Nomina{
+
+                            //PROPIEDADES
+                            #sueldo;
+                            #trabajador;
+
+//--------------------------------------------------------------------------------------------------->
+
+                            //CONSTRUCTOR
+                            constructor(sueldo,trabajador){
+                                      this.#sueldo = sueldo;
+                                      this.#trabajador = trabajador;
+                            }
+
+//--------------------------------------------------------------------------------------------------->
+
+                            //MÉTODOS
+                            sueldo(){
+                                return this.#sueldo;
+                            }
+
+                            trabajador(){                   //ACCEDEMOS A LA CLASE "EMPLEADO" DESDE EL METODO ---> OJO!!! SOLO DESDE EL MAIN
+                                return this.#trabajador;
+                            }
+
+//--------------------------------------------------------------------------------------------------->
+
+                            //MÉTODO PARA IMPRIMIR ---->
+                            //OJO!!! NO SE PUEDE ACCEDER A UN METODO DENTRO DE LA MISMA CLASE ----> ACCEDER CON "this.#trabajador.tlfn1()"
+                            toString(){
+                                return "NOMINA ----> Sueldo= "+this.#sueldo+", Telefono: "+this.#trabajador.tlfn1();
+                            }
+                    }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+                    class Empleado{
+
+
+                            //PROPIEDADES
+                            #nombre;
+                            #telefono;
+                            #departamento;
+
+//--------------------------------------------------------------------------------------------------->
+
+                            //CONSTRUCTOR
+                            constructor(nombre,telefono,departamento){
+                                  this.#nombre = nombre;
+                                  this.#telefono = telefono;
+                                  this.#departamento = departamento;
+                            }
+
+//--------------------------------------------------------------------------------------------------->
+
+                            //MÉTODOS
+                            nombre(){
+                              return this.#nombre;
+                            }
+
+                            tlfn1(){
+                              return this.#telefono;
+                            }
+
+                            departamento(){
+                              return this.#departamento;
+                            }
+
+//--------------------------------------------------------------------------------------------------->
+
+                            //MÉTODOS SETTER ----> CAMBIAMOS VALORES
+                            set tlfn(tlfn){
+                              this.#telefono = tlfn;
+                            }
+
+                            set telefono(tlfn){
+                                document.write("<br>Segundo telefono: ");
+                                document.write(tlfn);
+                            }
+
+//--------------------------------------------------------------------------------------------------->
+
+                            //MÉTODO PARA IMPRIMIR
+                            toString(){
+                              return "EMPLEADO ----> Nombre: "+this.#nombre+", Telefono: "+this.#telefono+", Departamento: "+this.#departamento;
+                            }
+                    }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+                          var e1= new Empleado("Adrian",630910599,"Programings");
+                          var n1= new Nomina(2000,e1);
+
+
+
+                          document.write(e1.toString());
+                          document.write("<br><br>Trabajador= "+e1.nombre());
+
+
+
+                          e1.tlfn= 634987243;
+                          document.write("<br>Telefono= "+e1.tlfn1());
+
+
+
+                          n1.trabajador().telefono=723847635;
+                          document.write("<br>"+e1.tlfn1());
+
+
+                          document.write("<br><br><br><br>DEPARTAMENTO= "+e1.departamento());
+                          document.write("<br>La nomina es de: "+n1.sueldo());
+
+                          document.write("<br>"+n1.trabajador().toString());
+                          document.write("<br>"+n1.toString());
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

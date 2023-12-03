@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+  <script type="text/javascript">
+
+
+
+                class Fiesta{
+
+                        //PROPIEDADES
+                        #tipo;
+                        #bocadillos;
+                        #fecha;
+                        #direccion;
+                        #bebidas;
+                        #invitados;
+
+//--------------------------------------------------------------------------------------------------->
+
+                        //CONSTRUCTOR
+                        constructor(tipo,bocadillos,fecha,direccion,bebidas,invitados){
+                            this.#tipo = tipo;
+                            this.#bocadillos = bocadillos;
+                            this.#fecha = fecha;
+                            this.#direccion = direccion;
+                            this.#bebidas = bebidas;
+                            this.#invitados = invitados;
+                        }
+
+//--------------------------------------------------------------------------------------------------->
+
+                        //MÉTODOS SETTER ----> CAMBIAN VALORES
+                        set tipo(tipo){
+                            this.#tipo = tipo;
+                        }
+                        set bocadillo(bocadillo){
+                            this.#bocadillos = bocadillos;
+                        }
+                        set fecha(fecha){
+                            this.#fecha = fecha;
+                        }
+                        set direccion(direccion){
+                            this.#direccion = direccion;
+                        }
+                        set bebidas(bebidas){
+                            this.#bebidas = bebidas;
+                        }
+                        set invitados(invitados){
+                            this.#invitados = invitados;
+                        }
+
+//--------------------------------------------------------------------------------------------------->
+
+                        //MÉTODOS GETTER ----> IMPRIMEN POR PANTALLA
+                        get tipo2(){
+                            return this.#tipo;
+                        }
+                        get bocadillo2(){
+                            return this.#bocadillos;
+                        }
+                        get fecha2(){
+                            return this.#fecha;
+                        }
+                        get direccion2(){
+                            return this.#direccion;
+                        }
+                        get bebidas2(){
+                            return this.#bebidas;
+                        }
+                        get invitados2(){
+                            return this.#invitados;
+                        }
+
+//--------------------------------------------------------------------------------------------------->
+
+                      //MÉTODOS
+                      invitar(){
+                          this.#invitados++;          //SUMARA 1 AL CONTADOR DE INVITADOS
+                          this.#bebidas++;
+                          this.#bocadillos++;
+                      }
+                      cancelar(){
+                          this.#invitados--;          //RESTARA 1 AL CONTADOR DE INVITADOS
+                          this.#bebidas--;
+                          this.#bocadillos--;
+                      }
+                      precioFiesta(){
+                          return this.#invitados * 5;
+                      }
+
+
+                      //MÉTODOS CON IMPRESION DE DATOS
+                      toString(){
+                          return "DATOS DE LA FIESTA -----------> <br><br>Tipo de fiesta= "+this.#tipo+"<br>Bocadillos= "+this.#bocadillos+"<br>Fecha= "+this.#fecha+"<br>Direccion= "+this.#direccion+"<br>Bebidas= "+this.#bebidas+"<br>Invitados= "+this.#invitados+"<br><br><br><br>";
+                      }
+
+                }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+                      var tipo= prompt("QUE TIPO DE FIESTA DESEA ----> INFANTIL, CUMPLEAÑOS, DISFRACES, DESPEDIDA");
+                      var invi= prompt("¿CUANTOS INVITADOS VAN A LA FIESTA?");
+                      invi=parseInt(invi);
+
+
+                      var fh= new Date(2022,10,15,20,00);
+                      var fh1= fh.toLocaleDateString()+" a las ----> "+fh.toLocaleTimeString();
+
+
+                      var f1= new Fiesta(tipo,invi,fh1,"Calle La Calzada Nº58 - 8ºB, 58000 Huelva",invi,invi);
+
+
+                      document.write(f1.toString());
+
+
+                      var invi1= prompt("¿DESEA AÑADIR ALGUN INVITADO MAS?");
+                      invi1=parseInt(invi1);
+                      for(var i=0;i<=invi1;i++){
+                        f1.invitar();
+                      }
+
+                      var invi2= prompt("¿DESEA CANCELAR ALGUN INVITADO?");
+                      invi2=parseInt(invi2);
+                      for(var i=0;i<=invi2;i++){
+                        f1.cancelar();
+                      }
+
+
+                      document.write(f1.toString());
+                      document.write("<br>EL PRECIO TOTAL DE LA FIESTA ES DE ----> "+f1.precioFiesta()+"€");
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

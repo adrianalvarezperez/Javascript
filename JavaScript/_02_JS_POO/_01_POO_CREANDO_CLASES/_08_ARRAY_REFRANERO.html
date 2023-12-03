@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+            class Refran{
+
+
+                //MÉTODO QUE IMPRIME EL ARRAY EN MINUSCULAS
+                modificarArray(refran){
+                    for(var i=0;i<refran.length;i++){
+                        refran[i]=refran[i].toLowerCase();
+                        document.write(refran[i]+"<br>");
+                    }
+                }
+            }
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            var f1= new Refran();                                                //INSTANCIA
+
+            var cade= [
+                            "A LA TERCERA VA LA VENCIDA",
+				                    "A MAS AÑOS, MAS DESENGAÑOS",                        //ARRAY CON 4 POSICIONES CON 4 CADENAS DE TEXTO EN CADA POSICION
+				                    "ANDE YO CALIENTE Y RIASE LA GENTE",
+				                    "BURRO GRANDE, ANDE O NO ANDE"
+                      ];
+
+
+
+            f1.modificarArray(cade);                                             //INSTANCIA.NOMBRE MÉTODO Y LE PASAMOS LA CADENA
+
+
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
