@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="_19_DATOS.css">
+
+
+  <script type="text/javascript">
+
+                function nuevaUrl(){
+                    var valor= document.getElementById('url').value;
+                    open(valor);
+
+                }
+
+
+                var url="_20_PASO_DE_DATOS.html";
+                var opened;
+                var cont=0;
+
+
+                function url1() {
+                  if(cont==0){
+                  cont++;
+                  opened= open(url);
+                } else {
+                  alert("La página ya esta cargada en otra pestaña")
+                }
+                }
+
+
+                function cerrar(){
+                  var x= confirm('Quieres cerrar la ventana...');
+                     if(x){
+                   opened.close();
+                }
+               }
+
+
+              function datos(){
+                 document.getElementById("info1").value= localStorage.getItem("datos"); //RECOGEMOS Y PEGAMOS DATOS DEL OTRO HTML
+              }
+
+  </script>
+
+
+</head>
+<body>
+
+
+      <button class="estilo1" type="button" name="button" onclick="nuevaUrl()">Haz click para ir a la url</button> <br><br><br><br>
+
+
+
+      <div class="estilo">Introduce una URL...
+            <input class="caja" type="text" id="url" value="http://www."  size="50">
+      </div>
+
+
+
+      <button class="estilo2" type="button" name="button" onclick="url1()">
+          Pincha aqui para ir a la subventana
+      </button>
+
+
+
+      <input type="text" name="info1" value="" id="info1" onfocus="datos()" placeholder="Haz foco aquí para ver lo que te manda el hijo..." size="50">
+
+
+
+      <button class="estilo3" type="button" name="button" onclick="cerrar()">
+          Pincha aqui para cerrar la subventana
+      </button>
+
+
+</body>
+</html>

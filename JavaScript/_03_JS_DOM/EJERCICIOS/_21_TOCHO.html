@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion a eventos</title>
+    <script>
+
+        function copiarTexto(){
+
+            var campo1= document.getElementById("campo1").value;
+            var campo2= document.getElementById("campo2").value= campo1;
+
+        }
+
+
+        function borrarTexto(){
+
+             campo2.value= ""          //AL QUITAR EL RATON SE PONE A CADENA VACIA
+        }
+
+
+        function cambiarColorBody(){
+
+            var rojo = Math.round(Math.random() * 255);
+            var verde = Math.round(Math.random() * 255);    //CREAMOS NUMEROS ALEATORIOS ENTRE 0 Y 255
+            var azul = Math.round(Math.random() * 255);
+
+
+            var color = `rgb(${rojo},${verde},${azul})`;        //CAMBIA EL COLOR DE FONDO DEL BODY CON TODOS LOS COLORES
+
+
+            document.body.style.backgroundColor= color;
+        }
+
+        function sumar(){
+
+            var numero1 = parseInt(campo3.value);
+            var numero2 = parseInt(campo4.value);
+            var resultado = numero1 + numero2;
+            
+            campo5.value = resultado;
+        }
+
+    </script>
+</head>
+
+
+<body>
+
+
+    <div style="text-align: center;">
+
+
+        <h1>Introducción a evento en JavaSctipt</h1>
+
+
+        Introduce un texto: <input id="campo1" type="text" value="Este seria el valor"/>
+
+        <button onclick="copiarTexto()">Púlsame para copiar el texto</button><br/>
+
+        <p style="display: inline-block;border: 1px solid blue" onmouseover="copiarTexto()" onmouseout="borrarTexto()">&nbsp; Pásame por encima &nbsp;</p><br/>
+
+        Texto resultante: <input id="campo2" type="text"><br/><br/>
+
+
+        <button onclick="cambiarColorBody()">Púlsame para cambiar de color</button><br/><br/>
+
+
+        Numero 1: <input id="campo3" type="number" name="numero1"><br/>
+        Numero 2: <input id="campo4" type="number"><br/><br/>
+
+        <button onclick="sumar()">Púlsame para sumar</button><br/><br/>
+        Suma resultante: <input id="campo5" type="number">
+
+
+    </div>
+
+
+ </body>
+</html>

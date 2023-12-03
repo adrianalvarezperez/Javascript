@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+    <link rel="stylesheet" href="reloj_03.css">
+    <script type="text/javascript">
+    var speed=30; // A menor numero más rápido
+    var flakes=150; // Numero de Copos de Nieve
+    var flake_image="snow_01.png"; // URL de la imagen de nieve
+    var swide, shigh;
+    var dx=new Array();
+    var xp=new Array();
+    var yp=new Array();
+    var am=new Array();
+    var sty=new Array();
+    window.onload=function() { if (document.getElementById) {
+    var k, f, b;
+    b=document.createElement("div");
+    b.style.position="absolute";
+    b.setAttribute("id", "bod");
+    document.body.appendChild(b);
+    set_scroll();
+    set_width();
+    for (var i=0; i<flakes; i++) {
+    dx[i]=0;
+    am[i]=Math.random()*20;
+    xp[i]=am[i]+Math.random()*(swide-2*am[i]-25);
+    yp[i]=Math.random()*shigh;
+    sty[i]=0.75+1.25*Math.random();
+    f=document.createElement("div");
+    f.style.position="absolute";
+    f.setAttribute("id", "flk"+i);
+    f.style.zIndex=i;
+    f.style.top=yp[i]+"px";
+    f.style.left=xp[i]+"px";
+    k=document.createElement("img");
+    k.src=flake_image;
+    f.appendChild(k);
+    b.appendChild(f);
+    }
+    setInterval("winter_snow()", speed);
+    }}
+    window.onresize=set_width;
+    function set_width() {
+    if (document.documentElement && document.documentElement.clientWidth) {
+    swide=document.documentElement.clientWidth;
+    shigh=document.documentElement.clientHeight;
+    }
+    else if (typeof(self.innerHeight)=="number") {
+    swide=self.innerWidth;
+    shigh=self.innerHeight;
+    }
+    else if (document.body.clientWidth) {
+    swide=document.body.clientWidth;
+    shigh=document.body.clientHeight;
+    }
+    else {
+    swide=800;
+    shigh=600
+    }
+    }
+    window.onscroll=set_scroll;
+    function set_scroll() {
+    var sleft, sdown;
+    if (typeof(self.pageYOffset)=="number") {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+    }
+    else if (document.body.scrollTop || document.body.scrollLeft) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+    }
+    else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+    }
+    else {
+    sdown=0;
+    sleft=0;
+    }
+    document.getElementById("bod").style.top=sdown+"px";
+    document.getElementById("bod").style.left=sleft+"px";
+    }
+    function winter_snow() {
+    for (var i=0; i<flakes; i++) {
+    yp[i]+=sty[i];
+    if (yp[i]>shigh-30) {
+    xp[i]=am[i]+Math.random()*(swide-2*am[i]-25);
+    yp[i]=0;
+    sty[i]=0.75+1.25*Math.random();
+    }
+    dx[i]+=0.02+Math.random()/10;
+    document.getElementById("flk"+i).style.top=yp[i]+"px";
+    document.getElementById("flk"+i).style.left=(xp[i]+am[i]*Math.sin(dx[i]))+"px";
+    }
+    }
+    </script>
+</head>
+
+
+<body bgColor="grey">
+
+  <div id="liveclock" class="outer_face">
+
+  	<div class="marker oneseven"></div>
+
+  	<div class="marker twoeight"></div>
+
+  	<div class="marker fourten"></div>
+
+  	<div class="marker fiveeleven"></div>
+
+
+
+  	<div class="inner_face">
+
+  		<div class="hand hour"></div>
+
+  		<div class="hand minute"></div>
+
+  		<div class="hand second"></div>
+
+  	</div>
+
+  </div>
+
+
+
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+
+  <script>
+
+  var $hands = $('#liveclock div.hand')
+
+
+
+  window.requestAnimationFrame = window.requestAnimationFrame
+
+                                 || window.mozRequestAnimationFrame
+
+                                 || window.webkitRequestAnimationFrame
+
+                                 || window.msRequestAnimationFrame
+
+                                 || function(f){setTimeout(f, 60)}
+
+
+
+
+
+  function updateclock(){
+
+  	var curdate = new Date()
+
+  	var hour_as_degree = ( curdate.getHours() + curdate.getMinutes()/60 ) / 12 * 360
+
+  	var minute_as_degree = curdate.getMinutes() / 60 * 360
+
+  	var second_as_degree = ( curdate.getSeconds() + curdate.getMilliseconds()/1000 ) /60 * 360
+
+  	$hands.filter('.hour').css({transform: 'rotate(' + hour_as_degree + 'deg)' })
+
+  	$hands.filter('.minute').css({transform: 'rotate(' + minute_as_degree + 'deg)' })
+
+  	$hands.filter('.second').css({transform: 'rotate(' + second_as_degree + 'deg)' })
+
+  	requestAnimationFrame(updateclock)
+
+  }
+
+
+
+  requestAnimationFrame(updateclock)
+
+  </script>
+
+
+  <script type="text/javascript">
+
+    function openwindow(){
+  window.open("autumn_effect.htm","","width=350,height=500")
+  }
+
+    //Configure below to change URL path to the snow image
+    var snowsrc="snow_02.gif"
+    // Configure below to change number of snow to render
+    var no = 10;
+    // Configure whether snow should disappear after x seconds (0=never):
+    var hidesnowtime = 0;
+    // Configure how much snow should drop down before fading ("windowheight" or "pageheight")
+    var snowdistance = "pageheight";
+
+  ///////////Stop Config//////////////////////////////////
+
+    var ie4up = (document.all) ? 1 : 0;
+    var ns6up = (document.getElementById&&!document.all) ? 1 : 0;
+
+    function iecompattest(){
+    return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+    }
+
+    var dx, xp, yp;    // coordinate and position variables
+    var am, stx, sty;  // amplitude and step variables
+    var i, doc_width = 800, doc_height = 600;
+
+    if (ns6up) {
+      doc_width = self.innerWidth;
+      doc_height = self.innerHeight;
+    } else if (ie4up) {
+      doc_width = iecompattest().clientWidth;
+      doc_height = iecompattest().clientHeight;
+    }
+
+    dx = new Array();
+    xp = new Array();
+    yp = new Array();
+    am = new Array();
+    stx = new Array();
+    sty = new Array();
+    snowsrc=(snowsrc.indexOf("dynamicdrive.com")!=-1)? "snow_02.gif" : snowsrc
+    for (i = 0; i < no; ++ i) {
+      dx[i] = 0;                        // set coordinate variables
+      xp[i] = Math.random()*(doc_width-50);  // set position variables
+      yp[i] = Math.random()*doc_height;
+      am[i] = Math.random()*20;         // set amplitude variables
+      stx[i] = 0.02 + Math.random()/10; // set step variables
+      sty[i] = 0.7 + Math.random();     // set step variables
+      if (ie4up||ns6up) {
+        if (i == 0) {
+          document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><a href=\"http://dynamicdrive.com\"><img src='"+snowsrc+"' border=\"0\"><\/a><\/div>");
+        } else {
+          document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><img src='"+snowsrc+"' border=\"0\"><\/div>");
+        }
+      }
+    }
+
+    function snowIE_NS6() {  // IE and NS6 main animation function
+      doc_width = ns6up?window.innerWidth-10 : iecompattest().clientWidth-10;
+      doc_height=(window.innerHeight && snowdistance=="windowheight")? window.innerHeight : (ie4up && snowdistance=="windowheight")?  iecompattest().clientHeight : (ie4up && !window.opera && snowdistance=="pageheight")? iecompattest().scrollHeight : iecompattest().offsetHeight;
+    if (snowdistance=="windowheight"){
+      doc_height = window.innerHeight || iecompattest().clientHeight
+    }
+    else{
+      doc_height = iecompattest().scrollHeight
+    }
+      for (i = 0; i < no; ++ i) {  // iterate for every dot
+        yp[i] += sty[i];
+        if (yp[i] > doc_height-50) {
+          xp[i] = Math.random()*(doc_width-am[i]-30);
+          yp[i] = 0;
+          stx[i] = 0.02 + Math.random()/10;
+          sty[i] = 0.7 + Math.random();
+        }
+        dx[i] += stx[i];
+        document.getElementById("dot"+i).style.top=yp[i]+"px";
+        document.getElementById("dot"+i).style.left=xp[i] + am[i]*Math.sin(dx[i])+"px";
+      }
+      snowtimer=setTimeout("snowIE_NS6()", 10);
+    }
+
+    function hidesnow(){
+      if (window.snowtimer) clearTimeout(snowtimer)
+      for (i=0; i<no; i++) document.getElementById("dot"+i).style.visibility="hidden"
+    }
+
+
+  if (ie4up||ns6up){
+      snowIE_NS6();
+      if (hidesnowtime>0)
+      setTimeout("hidesnow()", hidesnowtime*1000)
+      }
+
+  </script>
+
+
+</body>
+</html>

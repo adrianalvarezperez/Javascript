@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+  <style media="screen">
+
+
+    .verde {
+        background-color: green;
+        margin-left: 5%;
+        margin-right: 10%;
+        padding: 20px;
+        font-weight: bold;
+    }
+
+
+    .rojo {
+        background-color: red;
+        padding: 20px;
+        font-weight: bold;
+    }
+
+
+  </style>
+
+
+<script type="text/javascript">
+
+
+  function foco(){
+      nombre.focus();          //PONE EL FOCO AL CARGAR LA PAGINA
+  }
+
+
+
+  function validarFormulario() {
+
+
+        var nombre= document.getElementById("nombre").value;              //GUARDA EN LAS VARIABLES LOS DATOS INTRODUCIDOS EN EL CAMPO
+        var edad= document.getElementById("edad").value;
+        var email= document.getElementById("email").value;
+        var mensaje= document.getElementById("mensaje").value;
+
+        var longitud= 255;
+        var length= document.getElementById("mensaje").value.length;    //GUARDA EL NUMERO DE CARACTERES QUE HAS ESCRITO EN EL CAMPO MENSAJE1
+
+        var patron= /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;    //EXPRESION REGULAR PARA CORREO
+
+        var letras = /^[a-zA-ZáÁéÉíÍóÓúÚñÑüÜ\s]+$/;                      //EXPRESION REGULAR PARA NOMBRE ---> SOLO ACEPTA LETRAS Y ESPACIO
+
+        var num= /^[0-9]+$/;              //EXPRESION REGULAR PARA EDAD O UN TELEFONO --> SOLO ACEPTA NUMEROS
+
+
+      if(nombre == ""){                                                //SI ESTA VACIO -->  OTRO --> if(document.getElementById("name1").value.length == 0;
+          alert("Campo \"NOMBRE\" vacio");
+          document.formu.nombre.focus();
+
+      } else if(!letras.exec(nombre)){                                   //SI EL PATRON "!NO COINCIDE" CON EL NOMBRE INTRODUCIDO CON QUE SOLO LLEVE LETRAS ENTRA
+          alert("Campo \"NOMBRE\" solo acepta letras y espacios en blanco");
+          document.formu.nombre.focus();
+
+      } else if(edad == "" || edad > 120 || edad < 0){
+          alert("Datos no valida. Introduzca \"EDAD\" de 0 a 120 años");
+          document.formu.edad.focus();
+
+      } else if(!num.exec(edad)){
+            alert("Datos alfanumericos. Introduzca \"EDAD\" de 0 a 120 años");
+            document.formu.edad.focus();
+
+      } else if(email == "" || !patron.exec(email)){                //SI EL PATRON "!NO COINCIDE" CON EL EMAIL INTRODUCIDO  CON QUE SEA UN EMAIL ENTRA
+          alert("\"EMAIL\" incorrecto");
+          document.formu.email.focus();
+
+      } else if(length > longitud){
+          alert("El campo \"MENSAJE\" contiene mas de 255 caracteres, introduzca menos de 255");
+          document.formu.mensaje.focus();
+
+      } else if(mensaje == ""){
+          alert("El campo \"MENSAJE\" esta vacio");
+          document.formu.mensaje.focus();
+
+      } else {
+          document.formu.submit();        //ENVIA EL FORMULARIO
+          alert("MENSAJE ENVIADO");
+      }
+  }
+
+
+</script>
+
+
+</head>
+
+
+<body onload="foco()">
+
+
+  <form id="formu" name="formu" method="POST" action="">
+
+
+            Nombre: <input type="text" name="nombre" value="" id="nombre"> <br><br>
+            Edad:   <input type="text" name="edad" value="" id="edad"> <br><br>
+            Email:  <input type="text" name="email" value="" id="email"> <br><br>
+            sexo:   <select class="" name="opciones">
+                            <option value="opt1">Masculino</option>
+                            <option value="opt2">Femenino</option>
+                    </select> <br><br>
+
+            <textarea name="mensaje" rows="8" cols="80" placeholder="Mensaje: "id="mensaje"></textarea> <br><br>
+            <input type="button" name="envio" id="envio" value="Enviar" class="verde" onclick="validarFormulario()">
+            <input type="reset" name="borrado" id="borrado" value="Borrar formulario" class="rojo">
+
+
+  </form>
+
+
+</body>
+</html>

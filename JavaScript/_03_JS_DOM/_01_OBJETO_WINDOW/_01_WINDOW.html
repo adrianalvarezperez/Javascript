@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+  <script type="text/javascript">
+
+
+                    //WINDOW --> NO HACE FALTA HACER REFERENCIA AL OBJETO
+                    //---------------------------------------------------->
+
+
+                    //MÉTODOS  DE WINDOW
+
+
+                    alert("Cruceros");                          //SACA UNA ALERTA
+
+
+                    confirm("Holi");                           //SACA UNA ALERTA CON UN BOTON DE "ACEPTAR" Y OTRO DE "CANCELAR"
+
+
+                    var num= prompt("Introduce un numero");    //PEDIMOS UN NUMERO LO GUARDA Y LO IMPRIME EN EL CUERPO DEL HTML
+                    num=parseInt(num);
+                    document.write(num);
+
+
+//--------------------------------------------------------------------------------------------------->
+
+
+                    open("https://www.google.es");                                          //NOS LLEVA A LA URL QUE LE PASEMOS
+
+                    confirm(close("https://www.google.es"));                                //CIERRA UNA VENTANA
+
+//--------------------------------------------------------------------------------------------------->
+
+
+                    //MUEVE LA VENTANA 20px HACIA LA DERECHA Y 30px HACIA ABAJO
+                    moveBy(20, 30);
+
+                    //MUEVE LA VENTANA A UN TAMAÑO CONCRETO ----> 250 x 250
+                    resizeTo(250, 250);
+
+                    // Agrandar la altura de la ventana en 50px
+                    resizeBy(0, 50);
+
+                    //MUEVE LA VENTANA A UNA POSICION CONCRETA
+                    moveTo(0, 0);
+
+
+//--------------------------------------------------------------------------------------------------->
+
+
+                    setTimeout ("alert (\"¡Bienvenido!\") ", 5000) ;	    //MOSTRAMOS BIENVENIDO PASADO 5 SEGUNDOS
+
+
+//--------------------------------------------------------------------------------------------------->
+
+
+	                	var  temporizador= setTimeout ("alert (\"¡Bienvenido!\")", 10000) ;
+	                	var  confirmado= confirm ("¿Cancelamos la ejecución?") ;
+
+	                	if  (confirmado)  {
+			                  clearTimeout (temporizador) ;              //CANCELA LA EJECUCION DE SETTIMEOUT CUANDO PASEN 10 SEGUNDOS
+	                	}
+
+
+//--------------------------------------------------------------------------------------------------->
+
+
+                  		var  temporizador, numPreguntas= 0 ;
+                  		function  preguntar ( )  {
+                  			numPreguntas++ ;
+                  			var  confirmado= confirm ("¿Quieres continuar?") ;
+                  				if (!confirmado)  {
+                  					alert ("preguntas realizadas: "+numPreguntas ) ;            //CANCELA LA EJECUCION SETINTERVAL CADA 5 SEGUNDOS CON BOTON CANCELAR
+                  					clearInterval (temporizador) ;
+                  				}
+                  		}
+                  		temporizador= setInterval (preguntar, 5000) ;
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

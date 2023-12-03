@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="ES">
+<head>
+    <title>Acceder al documento.</title>
+    <style type="text/css">
+
+
+
+        #texto1, #texto2, #texto3  {
+                  font: bold 0.9em arial; color: blue;
+        }
+
+
+
+    </style>
+</head>
+
+
+
+<body>
+
+
+
+    <h1> Acceder al documento.</h1>
+    <p id="texto1"> Este texto1 debe ser leido por javascript</p>
+    <p onclick="alert(contenido1)">Pulsa aquí para leer el texto anterior.</p>
+
+    <p id="texto2">Este texto debe ser sustituido por el código javascript.</p>
+    <p onclick="elemento2.innerHTML = texto_cambiado">Pulsa aquí para cambiar el texto anterior.</p>
+
+    <p id="texto3">Este texto debe ser ampliado mediante código Javascript.</p>
+    <p onclick="elemento3.innerHTML += texto_ampliado">Pulsa aquí para ampliar el texto anterior.</p>
+
+    <script type="text/javascript">
+
+        var elemento1 = document.getElementById("texto1");
+        var contenido1 = elemento1.innerHTML;
+
+        var texto_cambiado ="este es el texto ya cambiado";
+        var elemento2 = document.getElementById("texto2");
+
+        var texto_ampliado = "Y esta es la frase para la ampliación del texto.";
+        var elemento3 = document.getElementById("texto3");
+        
+    </script>
+
+
+
+</body>
+</html>

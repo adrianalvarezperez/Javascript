@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+<script type="text/javascript">
+
+
+  function validarFormulario(){
+
+
+        var email= document.getElementById("email1").value;
+        var contraseña1= document.getElementById("contra1").value;
+        var contraseña2= document.getElementById("contra2").value;
+        var patron= /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+        var contr1= document.getElementById("contra1").value.length;
+        var contr2= document.getElementById("contra2").value.length;
+
+
+        if(email == "" || !patron.exec(email)){
+          alert("\"EMAIL\" incorrecto");
+          document.formu.email1.focus();
+
+        } else if(contraseña1 == ""){
+          alert("Campo contraseña esta vacio introduzca una contraseña");
+          document.formu.contra1.focus();
+
+        } else if(contr1 < 6){
+          alert("La contraseña contiene menos de 6 caracteres.");
+          document.formu.contra1.focus();
+
+        } else if(contr1 > 10){
+          alert("La contraseña contiene mas de 10 caracteres.");
+          document.formu.contra1.focus();
+
+        } else if(contraseña2 == ""){
+          alert("Campo repetir contraseña esta vacio.");
+          document.formu.contra2.focus();
+
+        } else if(contr2 < 6){
+          alert("La contraseña contiene menos de 6 caracteres.");
+          document.formu.contra2.focus();
+
+        } else if(contr2 > 10){
+          alert("La contraseña contiene mas de 10 caracteres.");
+          document.formu.contra2.focus();
+
+        } else if(contr1 != contr2){
+          alert("Las contraseñas no coinciden. Introduzca bien la contraseña en los dos campos.");
+          document.formu.contra1.focus();
+
+        } else {
+          document.formu.submit();        //ENVIA EL FORMULARIO
+          alert("MENSAJE ENVIADO");
+      }
+
+   }
+
+
+</script>
+
+</head>
+<body>
+
+
+<form name="formu" id="formu">
+
+        Email: <input type="text" name="email1" value="" id="email1"> <br><br><br>
+        Contraseña: <input type="password" name="contra1" placeholder="Entre 6 y 10 caracteres" value="" id="contra1" style="margin-right:20px;">
+        Repita Contraseña: <input type="password" name="contra2" value="" id="contra2" ><br><br>
+
+
+        <input type="button" name="envio" value="Enviar" class="verde" onclick="validarFormulario()">
+        <input type="reset" name="borrado" value="Borrar formulario" class="rojo">
+
+</form>
+
+
+</body>
+</html>

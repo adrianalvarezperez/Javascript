@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style media="screen">
+    .sti{
+        background-color: blue;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        left: 40%;
+        top: 150px;
+        font-weight: bold;
+        font-size: 40px;
+        color: white;
+        text-align: center;
+        padding-top: 50px;
+    }
+    body{
+      background-color: grey;
+    }
+  </style>
+
+
+  <script type="text/javascript">
+
+
+                      var num1;
+                      var num2;
+
+
+                      window.onload= function suma1(){
+                            num1=prompt("INTRODUCE EL PRIMER NUMERO A SUMAR...");
+                            num1=parseInt(num1);
+
+                            num2=prompt("INTRODUCE EL SEGUNDO NUMERO A SUMAR...");
+                            num2=parseInt(num2);
+                      }
+
+
+                      function resultado(){
+                            var total= num1+num2;
+                            document.getElementById("result").style.fontSize= "300px";        //PONEMOS EL RESULTADO A 300PX
+                            document.getElementById("result").style.color= "white";             //PONEMOS EL RESULTADO EN ROJO
+                            document.getElementById("result").style.fontWeight= "bold";       //PONEMOS EL RESULTADO EN NEGRITA
+                            document.getElementById("result").innerHTML= total;               //IMPRIMIMOS EN EL BOTON EL RESULTADO DE LA SUMA
+                      }
+
+
+
+  </script>
+</head>
+<body>
+
+
+  <button  onclick="resultado()" id="result" class="sti">PULSE AQUI PARA VER EL RESULTADO DE LA SUMA</button>
+
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+<style media="screen">
+
+
+  .verde {
+      background-color: green;
+      margin-left: 5%;
+      margin-right: 10%;
+      padding: 20px;
+      font-weight: bold;
+  }
+
+
+  .rojo {
+      background-color: red;
+      padding: 20px;
+      font-weight: bold;
+  }
+
+
+</style>
+
+
+<script type="text/javascript">
+
+
+  function foco(){
+      nombre.focus();          //PONE EL FOCO AL CARGAR LA PAGINA   ---> NOMBRE NAME + FOCUS
+  }
+
+
+
+function validarFormulario() {
+
+
+    var patron= /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;      //EXPRESION REGULAR PARA CORREO
+
+
+    var letras= /^[a-zA-ZáÁéÉíÍóÓúÚñÑüÜ\s]+$/;                        //EXPRESION REGULAR PARA NOMBRE ---> SOLO ACEPTA LETRAS Y ESPACIO
+
+    var num= /^[0-9]+$/;              //EXPRESION REGULAR PARA EDAD --> SOLO ACEPTA NUMEROS
+
+
+    if(document.getElementById("nombre").value == ""){          //SI ESTA VACIO -->  OTRO --> if(document.getElementById("name1").value.length == 0;
+        alert("Campo \"NOMBRE\" obligatorio");
+        document.formu.nombre.focus();                           //NOMBRE FORMULARIO + NOMBRE NAME + FOCUS
+
+    } else if(!letras.exec(document.getElementById("nombre").value)){                                   //BUSCA QUE EL NOMBRE NO COINCIDA CON EL PATRON QUE SOLO LLEVA LETRAS
+        alert("Campo \"NOMBRE\" solo acepta letras y espacios en blanco");
+        document.formu.nombre.focus();
+
+    } else if(document.getElementById("edad").value == "" || document.getElementById("edad").value > 120 || document.getElementById("edad").value < 0){
+        alert("Datos no validos. Introduzca \"EDAD\" de 0 a 120 años");
+        document.formu.edad.focus();
+
+    } else if(!num.exec(document.getElementById("edad").value)){
+        alert("Datos alfanumericos. Introduzca \"EDAD\" de 0 a 120 años");
+        document.formu.edad.focus();
+
+    } else if(document.getElementById("email").value == "" || !patron.exec(document.getElementById("email").value)){       //BUSCA QUE EL EMAIL NO COINCIDA CON EL PATRON Y EL CORREO SEA CORRECTO
+        alert("\"EMAIL\" incorrecto");
+        document.formu.email.focus();
+
+    } else if(document.getElementById("mensaje").value.length > 255){
+        alert("El campo \"MENSAJE\" contiene mas de 255 caracteres, introduzca menos de 255");
+        document.formu.mensaje.focus();
+
+    } else if(document.getElementById("mensaje").value == ""){
+        alert("El campo \"MENSAJE\" esta vacio");
+        document.formu.mensaje.focus();
+
+    } else {
+        document.formu.submit();
+        alert("MENSAJE ENVIADO!!!");
+    }
+}
+
+
+</script>
+
+
+</head>
+
+
+<body onload="foco()">
+
+
+  <form name="formu">
+
+
+            Nombre: <input type="text" name="nombre" value="" id="nombre"> <br><br>
+            Edad:   <input type="text" name="edad" value="" id="edad"> <br><br>
+            Email:  <input type="text" name="email" value="" id="email"> <br><br>
+            sexo:   <select class="" name="opciones">
+                            <option value="opt1">Masculino</option>
+                            <option value="opt2">Femenino</option>
+                    </select> <br><br>
+
+            <textarea name="mensaje" rows="8" cols="80" placeholder="Mensaje: " id="mensaje"></textarea> <br><br>
+            <input type="button" name="envio" value="Enviar" id="envio" class="verde" onclick="validarFormulario()">
+            <input type="reset" name="borrado" value="Borrar formulario" class="rojo">
+
+
+  </form>
+
+
+</body>
+</html>

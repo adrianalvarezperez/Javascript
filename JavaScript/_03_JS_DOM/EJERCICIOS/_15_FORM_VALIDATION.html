@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+  <script type="text/javascript">
+
+    function valida_envia(){
+
+
+
+          //VALIDAMOS EL AREA DE TEXTO NOMBRE
+  			  if (document.formu.nombre.value.length == 0){
+  			    	alert("Tiene que escribir su nombre");
+  				    document.formu.nombre.focus();			                          //SI NO HAY NADA PONEMOS EL FOCO OTRA VEZ EN ESE ELEMENTO
+  				    return 0;
+  			}
+
+
+
+  			//VALIDAMOS EL AREA DE TEXTO APELLIDOS
+  			if (document.formu.apellidos.value.length == 0){
+  				  alert("Tiene que escribir sus apellidos");
+  				  document.formu.apellidos.focus();                            //SI NO HAY NADA PONEMOS EL FOCO OTRA VEZ EN ESE ELEMENTO
+  				  return 0;
+  			}
+
+        document.formu.submit();                                  //SI TODOS LO CAMPOS SE HAN VALIDADO CORRECTAMENTE, ENVIAMOS EL FORMULARIO
+        alert("FORMULARIO ENVIADO");
+
+    }
+
+  </script>
+
+
+</head>
+
+
+<body>
+
+  <form id="formu" name="form" method="POST" action="">
+
+
+							<label for="nom">Nombre:
+								  <input name="nombre" type="text" class="campo" id="nombre">
+							</label>
+
+
+							<label for="ape">Apellidos:
+								  <input name="apellidos" type="text" class="campo" id="apellidos">
+							</label>
+
+
+              <input name="envi" type="button" onclick="valida_envia()" class="bt" id="Enviar" value="Enviar">
+
+
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+<style media="screen">
+
+  #botonera {
+      width: 600px;
+      height: 400px;
+      background-color: yellow;
+      margin-left: 30%;
+      margin-top: 10%;
+      font-size: 40px;
+      font-weight: bold;
+  }
+
+  body {
+      background-color: grey;
+  }
+
+</style>
+
+
+<script type="text/javascript">
+
+
+  function cadena() {
+      var cade= prompt("Introduce un texto...");
+      document.write("<strong>Cadena de texto introducida:</strong> " +cade+ "<br><br>");
+      document.write("<strong>Longitud de la cadena: </strong>" +cade.length+ "<br><br>");
+      document.write("<strong>Primer caracter de la cadena: </strong> " +cade.charAt(0)+ "<br><br>");
+      document.write("<strong>Cadena en minúsculas: </strong>" +cade.toLowerCase()+ "<br><br>");
+      document.write("<strong>Cadena en mayúsculas: </strong>" +cade.toUpperCase()+ "<br><br>");
+      document.write("<strong>Subcadena con las tres primeros caracteres: </strong>" +cade.substring(0,3)+ "<br><br>");
+  }
+
+
+</script>
+
+</head>
+<body>
+
+        <button id="botonera" onclick="cadena()">Introducir cadena</button>
+
+</body>
+</html>

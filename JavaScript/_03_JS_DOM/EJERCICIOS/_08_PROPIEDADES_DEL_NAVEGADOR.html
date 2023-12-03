@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+<style media="screen">
+
+  #botonera {
+      width: 400px;
+      height: 400px;
+      background-color: yellow;
+      margin-left: 35%;
+      margin-top: 15%;
+      font-size: 20px;
+      font-weight: bold;
+  }
+  body{
+    background-color: grey;
+  }
+
+</style>
+
+
+  <script type="text/javascript">
+
+
+        function propiedadesNav(){
+              var codigo= navigator.appName;
+              var codigo1= navigator.cookieEnabled;           //TRES VARIABLES QUE LLAMAN AL OBJETO NAVIGATOR Y CADA UNA A UNA PROPIEDAD DISTINTA
+              var codigo2= navigator.appVersion;
+
+
+              document.write(codigo+ "<br>" +codigo1+ "<br>" +codigo2);
+        }
+
+
+  </script>
+</head>
+<body>
+
+        <button id="botonera" onclick="propiedadesNav()">Propiedades del navegador</button>
+
+</body>
+</html>

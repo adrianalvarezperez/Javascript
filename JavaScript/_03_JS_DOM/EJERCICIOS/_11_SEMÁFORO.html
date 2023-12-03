@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+<style media="screen">
+
+  #bor1 {
+    width: 20%;
+    height: 50px;
+    margin-left: 30%;
+    margin-top: 100px;
+    border: 5px green solid;
+    font-weight: bold;
+  }
+
+  #bor2 {
+    width: 20%;
+    height: 50px;
+    margin-left: 30%;
+    margin-top: 100px;
+    border: 5px red solid;
+    font-weight: bold;
+  }
+
+  #bor3 {
+    width: 20%;
+    height: 50px;
+    margin-left: 30%;
+    margin-top: 100px;
+    border: 5px yellow solid;
+    font-weight: bold;
+  }
+
+</style>
+
+
+
+<script type="text/javascript">
+
+
+          function colores(col){
+                  //document.bgColor= col;        //CAMBIAMOS EL COLOR DE FONDO DE PANTALLA ENTERA AL PASAR POR ENCIMA DEL DIV CON EL RATON
+
+
+                  //AQUÍ SOLO CAMBIA EL COLOR A LOS TRES "DIV"
+                  document.getElementById("bor1").style.backgroundColor= col;
+                  document.getElementById("bor2").style.backgroundColor= col;
+                  document.getElementById("bor3").style.backgroundColor= col;
+          }
+
+
+</script>
+
+</head>
+
+
+<body>
+
+      <div id="bor1" onmouseover="colores('green')" onmouseout="colores('white')">Verde</div>
+      <div id="bor2" onmouseover="colores('red')" onmouseout="colores('white')">Rojo</div>
+      <div id="bor3" onmouseover="colores('yellow')" onmouseout="colores('white')">Amarillo</div>
+
+</body>
+</html>

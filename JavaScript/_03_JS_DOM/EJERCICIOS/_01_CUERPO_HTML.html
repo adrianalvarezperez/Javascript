@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+  <script type="text/javascript">
+
+
+                //ESCRIBIENDO EN EL CUERPO DEL DOCUMENTO
+                var nombre= "Cruceros", apellido= "Veleros";
+
+
+
+                //MAYOR O MENOR
+                var num= prompt("Introduce un número...");
+                num= parseInt(num);
+                var num2= prompt("Introduce el segundo número...");
+                num2= parseInt(num2);
+
+                if(num > num2) {
+                  document.write("<strong>El número mayor entre "+num+ " y "+num2+ " es: </strong>\t "+num);
+                } else {
+                  document.write("<strong>El número mayor entre "+num+ " y "+num2+ " es: </strong>"+num2);
+                }
+
+
+
+  </script>
+  
+</head>
+
+
+<body onload="alert('PÁGINA CARGADA')">
+
+
+<script type="text/javascript">
+
+
+          document.write("<br><br><br><br><strong>ESCRIBIENDO EN EL CUERPO DEL DOCUMENTO HTML</strong>");
+          document.write("<br>NOMBRE= "+nombre+"<br>APELLIDO= "+apellido);
+
+</script>
+
+          <br><br><br><br>
+          <a href="javascript:alert('VAMOS A BAILAR');">PULSA EL JAVASCRIPT</a>  <!--SACAMOS ALERTA-->
+
+
+</body>
+</html>

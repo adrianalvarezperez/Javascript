@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+<style media="screen">
+.barra{
+  background-color: olive;
+  width: 49%;
+  height: 80px;
+  margin-left: 16%;
+  color: white;
+  font-size: 50px;
+  padding-left: 35%;
+  padding-top: 20px;
+}
+img {
+  float: left;
+}
+.izqui{
+  width: 78%;
+  height: 500px;
+  float: left;
+}
+.dere{
+  width: 20%;
+  height: 250px;
+  float: right;
+}
+.primero{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.segundo{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.pri{
+  background-color: olive;
+  height: 30px;
+  padding-left: 25%;
+  padding-top: 10px;
+}
+.se{
+  background-color: olive;
+  height: 30px;
+  padding-left: 25%;
+  padding-top: 10px;
+}
+.ter{
+  background-color: olive;
+  height: 30px;
+  padding-left: 25%;
+  padding-top: 10px;
+}
+.cu{
+  background-color: olive;
+  height: 30px;
+  padding-left: 25%;
+  padding-top: 10px;
+}
+.pie {
+  width: 100%;
+  height: 50px;
+  float: left;
+  background-color: olive;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.pezuña{
+  color: white;
+  margin-left:20px;
+}
+
+
+input {
+  width: 37%;
+  height: 70px;
+  color : blue;
+  font-family : Verdana, Arial, Helvetica;
+  font-size : 50px;
+  text-align : center;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: 0px -90px ;
+  border-radius: 70px;
+  box-shadow: green 50px 50px 200px;
+  text-shadow: red 50px 50px 50px;
+
+}
+span {
+  color: white;
+}
+
+
+
+</style>
+
+
+  <script type="text/javascript">
+
+
+    function mueveReloj(){
+        momentoActual = new Date()
+        hora = momentoActual.getHours()
+        minuto = momentoActual.getMinutes()
+        segundo = momentoActual.getSeconds()
+
+        str_segundo = new String (segundo)
+        if (str_segundo.length == 1)
+           segundo = "0" + segundo
+
+        str_minuto = new String (minuto)
+        if (str_minuto.length == 1)
+           minuto = "0" + minuto
+
+        str_hora = new String (hora)
+        if (str_hora.length == 1)
+           hora = "0" + hora
+
+        horaImprimible = hora + " : " + minuto + " : " + segundo
+
+        document.form_reloj.reloj.value = horaImprimible
+
+        setTimeout("mueveReloj()",1000)
+    }
+
+
+
+    function cambiaTamaño(){
+
+      if (document.images) {
+
+          document.images.logo.width= 50;
+
+          document.images.logo.height= 50;
+
+      } else {
+
+          logo = document.getElementById("logo");
+
+          logo.width = 100;
+
+          logo.height = 100;
+
+      }
+
+    }
+
+
+  </script>
+</head>
+<body onload="mueveReloj()">
+  <img src="olimpic.png" alt="" id="logo" onload="cambiaTamaño()">
+
+  <div class="barra" id="barra">
+
+    <form name="form_reloj">
+              <input type="text" name="reloj" onfocus="window.document.form_reloj.reloj.blur()">
+    </form>
+
+  </div>
+
+
+  <h1>Encabezado 1</h1>
+  <div class="izqui">
+           <br><br><br> <div class="primero"><h2>Artículo 1</h2>
+           <p>Las intervenciones del VAR han sido decisivas en el signo de seis partidos de esta
+              temporada para Real Madrid y Barcelona, pero no para el montante de puntos de cada uno
+              de ellos, ya que les ha dado tantos como les ha quitado. Es decir, con o sin VAR,
+              el Real Madrid sumaría 77 puntos y el Barcelona 73 y se mantendría la diferencia de cuatro
+              puntos entre ellos.</p></div> <br><br><br>
+
+            <div class="segundo"><h2>Artículo 2</h2>
+            <p>El presidente de LaLiga, Javier Tebas (San José, Costa Rica, 1962) analiza el presente y el
+              futuro del fútbol español, sobre todo económicamente, tras la crisis del coronavirus.
+              Su charla en directo, grabada el pasado miércoles en la sede de la patronal y emitida este lunes,
+              ha servido para inaugurar hoy otra edición del World Football Summit Live que se celebrará toda
+              esta semana con más de 150 ponentes y 3.000 asistentes.</p></div>
+  </div>
+
+
+  <div class="dere">
+            <div class="pri"><a href="http://www.as.com" >Periodico AS</a></div><br>
+            <div class="se"><a href="http://www.Google.es">Buscador de google</a></div><br>
+            <div class="ter"><a href="http://www.Apple.es">Apple</a></div><br>
+            <div class="cu"><a href="http://www.facebook.com">Facebook</a></div><br>
+
+  </div> <br><br>
+
+
+  <div class="pie"> <p class="pezuña">Pie de página</p>
+
+  </div>
+
+</body>
+</html>

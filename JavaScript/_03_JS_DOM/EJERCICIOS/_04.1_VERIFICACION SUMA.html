@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+
+                window.onload= function() {
+                    var a= Math.round(Math.random()*10);
+                    var b= Math.round(Math.random()*10);
+                    document.getElementById("a").value=a;
+                    document.getElementById("b").value=b;
+                }
+
+
+
+                function verificarSuma() {
+                    var a= parseInt(document.getElementById("a").value);
+                    var b= parseInt(document.getElementById("b").value);
+                    var result= parseInt(document.getElementById("result").value);
+
+                    var suma= a+b;
+                    if(suma == result){
+                        alert("CORRECTO");
+                    } else{
+                        alert("INCORRECTO");
+                    }
+                }
+
+    </script>
+</head>
+<body>
+
+    <h1>VERIFICACION SUMA</h1>
+
+    <form>
+         <input type="text" id="a" name="a" readonly="readonly" size="3"> +
+         <input type="text" id="b" name="b" readonly="readonly" size="3"><br><br>
+
+         Introduzca el resultado de la suma: <input type="text" id="result" name="result"><br><br>
+
+         <input type="button" onclick="verificarSuma()"  value="Verificar suma">
+    </form>
+    
+</body>
+</html>
