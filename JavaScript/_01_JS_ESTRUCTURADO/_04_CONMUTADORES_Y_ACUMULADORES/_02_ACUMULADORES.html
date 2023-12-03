@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+                    //ACUMULADORES  --  SUM= SUM + C
+                    //-------------------------------->
+
+
+        var sum= 0;
+        var prod= 1;
+        var c= 8;
+
+
+        do {
+            c+= 2;                            //C VALE 10 + 2 EN CADA PASADA ----> 10 - 12 - 14 - 16 - 18 - 20 - 22...
+            sum= sum+c;						            //ACUMULADORES DE SUMA ----> SUMA LOS NUMEROS EN CADA PASADA ----> 10 - 22 - 36 - 52 - 70...
+            document.write("C VALE ESTA VUELTA + "+c+ " ------------> SUM VALE ESTA VUELTA + " +sum+ "<br>");
+            prod= prod*c;                    //ACUMULADOR DE MULTIPLICACION ----> MULTIPLICA LOS NUMERO EN CADA PASADA
+
+        } while(c<30);
+
+
+        document.write("<br><br><br>AL MULTIPLICAR TODOS LOS NUMEROS DE \"C\" NOS DA ------------> " +prod);
+
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+        var sum= 0;
+        var c= 0;                                                   //DOS CONTADORES
+        var num;                                                    //GUARDAMOS LOS NUMEROS INTRODUCIDOS
+
+
+        do {
+              num= prompt("INTRODUZCA VARIOS NUMEROS... ");          //METEMOS NUMEROS POR TECLADO
+              num= parseInt(num);                                   //PASAMOS LA CADENA A NUMERO
+
+              if(num>=0) {                                          //SI EL NUMERO INTRODUCIDO ES MAYOR O IGUAL QUE 0 ENTRAS
+                      sum= sum+num;                                 //0 = 0 + 5     --     5= 5 + 15....      20 EN TOTAL
+                      c++;                                          //CUENTA LA CANTIDAD DE NUMEROS INTRODUCIDOS
+              }
+
+        } while(num>=0);                                            //SALE DEL BUCLE CUANDO METAS UN -1
+
+
+        document.write("<br><br><br><br>SE HAN SUMADO... "+c+" NUMEROS.");
+        document.write("<br><br><br><br>LA SUMA DE TODOS LOS NUMEROS ES... "+sum);
+
+
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+
+
+            var cali;
+
+
+            do{
+                cali= prompt("INTRODUZCA UNA CALIFICACION...");
+                cali= parseFloat(cali);
+
+                calificaciones(cali);
+
+            } while(cali>=0 && cali<=10);
+
+
+            document.write("<br><br><br><br>HASTA PRONTO!!!");
+
+
+//------------------------------------------------------------------------------->
+
+
+            function calificaciones(cali){
+                if(cali>=0 && cali<3){
+                    document.write("<br>MUY DEFICIENTE...");
+                } else if(cali>=3 && cali<5) {
+                    document.write("<br>INSUFICIENTE...");
+                } else if(cali>=5 && cali<7) {
+                    document.write("<br>BIEN");
+                } else if(cali>=7 && cali<9) {
+                    document.write("<br>NOTABLE");
+                } else if(cali>=9 && cali<=10) {
+                    document.write("<br>SOBRESALIENTE");
+                }
+
+            }
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

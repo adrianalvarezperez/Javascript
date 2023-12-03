@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+
+                  //ARRAY ASOCIATIVOS
+                  //-------------------->
+
+
+
+                var cervezas= [];
+                cervezas["MAHOU"]= "4.8 Grados";
+                cervezas["SAN MIGUEL"]= "4.6 Grados";
+                cervezas["ESTRELLA GALICIA"]= "5.8 Grados";
+
+
+                document.write(cervezas["MAHOU"]);
+                document.write("<br>"+cervezas["SAN MIGUEL"]);
+                document.write("<br>"+cervezas["ESTRELLA GALICIA"]);
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+                delete cervezas["SAN MIGUEL"];
+                document.write("<br><br><br><br>"+cervezas["SAN MIGUEL"]+"<br><br><br><br>");
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+                //RECORRER ARRAY ASOCIATIVO
+                //-------------------------->
+
+                for(var i in cervezas){
+                            document.write("<br>" +i+ " ----> " +cervezas[i]);                 //FOR IN
+                }
+
+
+
+
+
+                for(var i=0;i<cervezas.length;i++){
+                            document.write("<br>"+i+ " ----> " +cervezas[i]);                   //FOR
+                }
+
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+          //CONMUTADOR "SE SALE" AL ENCONTRAR UN 10
+          //--------------------------------------->
+
+
+		      var conmu= false;
+		      var ale;
+
+
+	      	do {
+			        ale= Math.floor(Math.random()*10+1);
+			        document.write("<br>"+ale);
+
+			        if(ale == 10) {
+				          conmu= true;
+			        }
+
+		      } while(ale!=10);
+
+
+		      document.write("<br>¿SE HA ENCONTRADO UN 10? ------------> "+conmu+ "<br><br><br><br>");
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+          //CONMUTADOR "NO SE SALE" AUNQUE ENCUENTRE UN 10. SOLO SE SALE AL FINAL DEL BUCLE QUE ESTA PUESTO A 10 VUELTAS
+          //------------------------------------------------------------------------------------------------------------>
+
+
+          var c= 0;
+          var conmu= false;
+
+          do {
+              c++;
+              var ale= Math.floor(Math.random()*10+1);
+              document.write("<br>"+ale);
+
+              if(ale == 10) {
+                  conmu= true;
+              }
+
+          } while(c<10);
+
+
+          document.write("<br>¿SE HA ENCONTRADO UN 10?  --------------> " +conmu);
+
+
+
+
+  </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

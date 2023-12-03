@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+
+      //OPERADORES LÓGICOS ---->     &&.....||
+      //--------------------------------------->
+
+
+
+
+      // Y LOGICO ----> &&                   //TODAS LAS CONDICIONES TIENEN QUE SER CIERTAS. SI FALLA UNA FALSO.
+      //--------------------------------------------------------------------------------------------------------->
+
+      var valor1 = true;
+      var valor2 = false;
+      var resultado = valor1 && valor2;
+
+
+      valor1 = true;
+      valor2 = true;
+      resultado = valor1 && valor2;
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+      // O LOGICO ----> ||                    //UNA DE LAS CONDICIONES TIENE QUE SER CIERTA. SI FALLAN TODAS ES FALSO.
+      //--------------------------------------------------------------------------------------------------------------->
+      
+      var valor1 = true;
+      var valor2 = false;
+      resultado = valor1 || valor2; // resultado = true
+
+      valor1 = false;
+      valor2 = false;
+      resultado = valor1 || valor2; // resultado = false
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+      var a= 3;
+      var b= 5;
+
+      var evaluacion;
+
+      evaluacion= a>b && b>1;
+      alert(evaluacion);        //FALSE PORQUE TIENEN QUE SER LAS DOS VERDADERAS
+
+
+      evaluacion= a>b || b>1;
+      alert(evaluacion);        //TRUE PORQUE UNA DE LAS DOS ES VERDADERA
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

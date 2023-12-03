@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+                    //NUMERO AL AZAR  --  MATH.FLOOR(MATH.RANDOM()*10+1)  --  SACA DEL 1 AL 10 AL AZAR
+                    //--------------------------------------------------------------------------------->
+
+
+          var c= 0;
+          var mayor= 0;
+          var menor= 0;
+
+
+
+          do {
+              var ale= Math.floor(Math.random()*10+1);        //SACA NUMEROS ALEATORIOS DEL 1 AL 10
+              document.write("<br>"+ale);
+
+              if(ale>5) {
+                  mayor++;
+              }
+
+              if(ale<=5) {
+                  menor++;
+              }
+
+              c++;
+
+          } while(c<10);                                                          //LO HACE DE 0 A 9 VECES
+
+
+          document.write("<br><br><br><br><br>"+mayor+" --------> MAYORES DE 5 AÑOS <br>");
+          document.write(menor+" --------> MENOR O IGUAL A 5 AÑOS<br><br><br><br>");
+
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+            var k= 0;
+	        	var num;
+
+
+		        do {
+		            	k++;
+		            	var ale= Math.floor(Math.random()*20+1);                             //SACA NUMEROS ALEATORIOS DEL 1 AL 20
+			            document.write("<br><br>EL NUMERO ALEATORIO ES..."+ale);
+
+			            if(ale>=5 && ale<=15) {                                              //SI EL NUMERO ES ENTRE 5 Y 15
+				                num= ale+15;                                                   //GUARDAS EN NUM EL ALEATORIO QUE SALGA SUMANDOLE 15
+				                document.write(" --------> LA VARIABLE NUM VALE..."+num);
+			            } else {
+				                num= ale+5;                                                    //GUARDAS EN NUM EL ALEATORIO QUE SALGA SUMANDOLE 5
+				                document.write(" --------} LA VARIABLE NUM VALE..."+num);
+			            }
+
+
+		        } while(k<5);                                                              //LO HACE DE 0 A 4 VECES EL BUCLE
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            var lote=Math.floor(Math.random()*99999+0);
+
+            document.write("<br><br><br><br>EL NUMERO PREMIADO DE GORDO DE LA LOTERIA DE NAVIDAD  ---->  "+lote);
+
+
+            
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+                  //CLASE DATE
+                  //------------>
+
+                  var hora= new Date();                                //INSTANCIA VACIA COGE LA HORA ACTUAL
+
+
+                                        //INFORMACION
+                  document.write(hora.toLocaleString());               //SACA FECHA Y HORA ACTUAL
+
+                  document.write("<br>"+hora.toLocaleTimeString());    //SACA HORA ACTUAL
+
+                  document.write("<br>"+hora.toLocaleDateString());    //SACA FECHA ACTUAL
+
+                  document.write("<br>"+hora.toString());              //SACA _TODO_
+
+//----------------------------------------------------------------------------------------------------------------------------------------------->
+
+                  document.write("<br>"+hora.getTime());               //MILISEGUNDOS DESDE 1970
+
+//----------------------------------------------------------------------------------------------------------------------------------------------->
+
+                                        //INFORMACION DE HORA Y FECHA
+                  document.write("<br>"+hora.getMilliseconds());        //MILISEGUNDOS DE LA INSTANCIA ACTUAL
+                  document.write("<br>"+hora.getSeconds());             //SEGUNDOS DE LA INSTANCIA ACTUAL
+                  document.write("<br>"+hora.getMinutes());             //MINUTOS DE LA INSTANCIA ACTUAL
+                  document.write("<br>"+hora.getHours());               //HORA DE LA INSTANCIA ACTUAL
+
+
+
+                  document.write("<br>"+hora.getDate());                //DÍA DE LA INSTANCIA ACTUAL
+                  document.write("<br>"+hora.getDay());                 //DÍA DE LA SEMANA DE LA INSTANCIA ACTUAL "DOMINGO 0 - SABADO 6"
+                  document.write("<br>"+hora.getMonth());               //MES DE LA INSTANCIA ACTUAL "ENERO 0 - DICIEMBRE 11"
+                  document.write("<br>"+hora.getFullYear());            //AÑO DE LA INSTANCIA ACTUAL
+
+//----------------------------------------------------------------------------------------------------------------------------------------------->
+
+                      var hora2= new Date();
+                                        //CAMBIAR O ACTUALIZAR HORA Y FECHA
+                  document.write("<br>"+hora2.setTime(50000000000)+ " ----> "+hora2.toString());                 //PONE LA HORA ACTUAL EN 300000_MILISEG...
+                  document.write("<br>"+hora2.setMilliseconds(5000)+ " ----> "+hora2.toLocaleTimeString());      //PONE LA HORA ACTUAL EN 5000_MILISEG...
+                  document.write("<br>"+hora2.setSeconds(50, 4000)+ " ----> "+hora2.toLocaleTimeString());       //PONE LA HORA ACTUAL EN 50_SEG...4000_MILISEG
+                  document.write("<br>"+hora2.setMinutes(5, 50, 4000)+ " ----> "+hora2.toLocaleTimeString());    //PONE LA HORA ACTUAL EN 5 MIN...50_SEG...4000_MILISEG
+                  document.write("<br>"+hora2.setHours(12, 5, 50, 4000)+ " ----> "+hora2.toLocaleTimeString());  //PONE LA HORA ACTUAL EN  12_H...50_SEG...4000_MILISEG
+
+
+
+
+                  document.write("<br>"+hora.setDate(3)+ " ----> "+hora.toLocaleDateString());           //PONE LA SEMANA ACTUAL EN EL DIA 3
+                  document.write("<br>"+hora.setMonth(1)+ " ----> "+hora.toLocaleDateString());          //PONE EL MES ACTUAL EN EL MES 2
+                  document.write("<br>"+hora.setFullYear(2028)+ " ----> "+hora.toLocaleDateString());    //PONE EL AÑO ACTUAL EN EL AÑO 1
+
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

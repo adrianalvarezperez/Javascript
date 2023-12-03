@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+                //CREACION DE UNA MATRIZ BIDIMENSIONAL
+                //-------------------------------------->
+
+
+                var nombre= new Array(10);
+                for(var i=0;i<10;i++){                            //FILAS. EL 10 SE PUEDE CAMBIAR POR "length"
+                      nombre[i]= new Array(7);                    //COLUMNAS
+                }
+
+
+                var nombre= new Array(10);
+                for(var i=0;i<nombre.length;i++){                 //FILAS. 
+                      nombre[i]= new Array(7);                    //COLUMNAS
+                }
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+                for(var i=0;i<nombre.length;i++) {
+                    for(var j=0;j<nombre[i].length;j++){           //RECORREMOS LA MATRIZ RELLENANDO LAS POSICIONES CON _TODO_ "LIBRE"
+                        nombre[i][j]="Libre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                    }
+                }
+
+
+                nombre[0][0]= "1234BVC";
+                nombre[0][1]= "9876RTF";                            //INSERTAMOS TRES NUEVAS MATRICULAS DE COCHE
+                nombre[4][3]= "7654ABJ";
+
+
+                for(var i=0;i<nombre.length;i++){
+                      for(var j=0;j<nombre[i].length;j++){          //VOLVEMOS A RECORRER LA MATRIZ CON LAS NUEVAS MATRICULAS
+                           document.write(nombre[i][j]+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+                      }
+                      document.write("<br>");
+                }
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

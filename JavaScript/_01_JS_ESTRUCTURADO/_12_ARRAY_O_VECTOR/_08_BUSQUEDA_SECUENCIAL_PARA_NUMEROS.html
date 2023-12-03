@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+
+
+                //BUSQUEDA SECUENCIAL PARA NUMERO  ---->  DESORDENADOS
+                //------------------------------------------------------>
+
+
+                var num1= [10,20,1,5,758,1034,9,78,24,235];
+
+                var num2;
+
+                do{
+                    num2= prompt("INTRODUCE UN NUMERO A BUSCAR");
+
+                    var buscar= false;
+                    var i;
+
+                    for(i=0; i<num1.length && !buscar; i++){
+                          if(num1[i]==num2){
+                                buscar= true;
+                          }
+                    }
+
+                    if(buscar){
+                        document.write(num2+" ----> ENCONTRADO EN POSICION ----> "+(i-1)+"<br>");
+                    } else {
+                        document.write("NO ENCONTRADO<br>");
+                    }
+                } while(num2 >= 0);
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

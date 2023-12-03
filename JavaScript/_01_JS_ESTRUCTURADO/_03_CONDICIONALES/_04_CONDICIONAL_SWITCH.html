@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+        //CONDICIONAL SWITCH  --  ES IGUAL QUE EL ELSE_IF  --  DE TODAS LAS CONDICIONES COGE LA QUE SE CUMPLE
+        //----------------------------------------------------------------------------------------------------->
+
+
+
+        var dia;
+
+
+        do {
+        dia= prompt("INTRODUCE UN NUMERO DEL 1 AL 7");
+        dia= parseInt(dia);
+
+
+
+
+            if((dia>=1 && dia<=7) || dia<0) {
+                switch(dia) {
+                    case 1: document.write("LUNES<br>");break;
+                    case 2: document.write("MARTES<br>");break;
+                    case 3: document.write("MIERCOLES<br>");break;
+                    case 4: document.write("JUEVES<br>");break;
+                    case 5: document.write("VIERNES<br>");break;
+                    case 6: document.write("SABADO<br>");break;
+                    case 7: document.write("DOMINGO<br>");break;
+                    case -1: document.write("");break;
+                }
+            } else {
+                alert("NUMERO INCORRECTO");
+            }
+
+
+        } while(dia>=0);        //CON -1 SALIMOS DEL BUCLE
+
+
+        alert("SE ACABO. ADIOS");
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+      var valor;
+
+	  	do {
+		    	valor= prompt("INTRODUCE UN NUMERO DEL 1 AL 9");
+			    valor= parseInt(valor);
+
+
+			    switch (valor) {
+				      case 1:
+				      case 2:
+				      case 3: document.write("EL VALOR ES 1, 2 o 3<br>");break;
+				      case 4:
+				      case 5:
+				      case 6: document.write("EL VALOR ES 4, 5 o 6<br>");break;
+				      case 7:
+				      case 8:
+				      case 9: document.write("EL VALOR ES 7, 8 o 9<br>");break;
+
+				      default: document.write("EL VALOR ES MAYOR QUE 9<br>");break;
+			    }
+
+		  } while(valor>=0);
+
+
+			alert("SE ACABO. ADIOS");
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+      var valor;
+      var num= 0;
+
+
+      do {
+          valor= prompt("INTRODUCE UN CARACTER DE LA A-Z");
+
+
+          if(valor) {
+            switch(valor.toLowerCase()) {
+                case "a": document.write("EL CARACTER ES A<br>");break;
+                case "b": document.write("EL CARACTER ES B<br>");break;
+                case "c": document.write("EL CARACTER ES C<br>");break;
+                case "d": document.write("EL CARACTER ES D<br>");break;
+
+                default: document.write("El valor es distinto a -----> a, b, c, d<br>");
+            }
+          }
+          num++;
+      } while(num<10);
+
+
+      alert("SE ACABO. ADIOS");
+
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

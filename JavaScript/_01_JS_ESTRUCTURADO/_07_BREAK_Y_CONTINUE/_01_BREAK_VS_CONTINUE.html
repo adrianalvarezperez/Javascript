@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+                  //BREAK  ---->  HACE QUE ROMPA LA EJECUCION DEL BUCLE
+                  //---------------------------------------------------->
+
+
+
+
+                  var letras1 = "abcedefghijk";
+                  var resultado1 = "";
+
+
+                  for (i in letras1) {
+                        if (letras1[i] == 'f') {       //QUITAR !NEGACION PARA QUE ENTRE
+                          break;                      //SI ENCUENTRA UNA "F" PARA Y SALE DEL FOR Y NO IMPRIME NADA MAS
+                        } else {
+                          resultado1 += letras1[i];     //CONCATENAMOS TODAS LAS LETRAS HASTA ACABAR
+                        }
+                  }
+
+
+                  document.write(resultado1);
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+                      var cadena = "Esto es un texto muy largo que tomamos como ejemplo...";
+                      var letras2 = cadena.split("");                    //SPLIT ----> CONVIERTE CADENA EN ARRAY
+                      var resultado2 = "";
+
+                      for(i in letras2) {
+                          if(!letras2[i] == 'a') {                         //QUITAR !NEGACION PARA QUE ENTRE
+                                break;                                    //SI ENCUENTRAUNA "A" PARA Y SALE DEL FOR Y NO IMPRIME NADA MAS
+                          } else {
+                                resultado2 += letras2[i];                 //CONCATENAMOS TODAS LAS PALABRAS HASTA ACABAR
+                          }
+                      }
+                      document.write("<br><br>"+resultado2);              // APARECERA EN PANTALLA ----> "ESTO ES UN TEXTO MUY L"
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                    //CONTINUE ----> HACE QUE VUELVA AL PRINCIPIO DEL BUCLE Y PASE A LA SIGUIENTE CONDICION
+                    //-------------------------------------------------------------------------------------->
+
+
+                    var resultado3 = "";
+                    var letras3= "abcedefghijk";
+
+                    for (i in letras3) {
+                        if (!letras3[i] == 'f') {           //QUITAR !NEGACION PARA QUE ENTRE
+                            continue;                       //PASAMOS A LA SIGUIENTE ITERACIÓN. ESCRIBE LA CADENA ENTERA SIN NINGUNA "F"
+                        } else {
+                            resultado3 += letras3[i];       //CONCATENAMOS TODAS LAS LETRAS HASTA ACABAR
+                        }
+                    }
+
+
+                    document.write("<br><br>"+resultado3);
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                  var cadena2 = "En un lugar de la Mancha de cuyo nombre no quiero acordarme...";
+                  var letras2 = cadena2.split("");                //SPLIT ----> CONVIERTE CADENA EN ARRAY
+                  var resultado2 = "";
+
+
+                  for(i in letras2) {
+                      if(!letras2[i] == 'a') {                   //QUITAR !NEGACION PARA QUE ENTRE
+                          continue;                              //ESCRIBE LA CADENA SIN NIGUNA "A"
+                      } else {
+                          resultado2 += letras2[i];              //CONCATENAMOS TODAS LAS LETRAS HASTA ACABAR
+                      }
+                  }
+
+
+                  document.write("<br><br>"+resultado2);
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

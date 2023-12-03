@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+  <script type="text/javascript">
+
+
+
+                //MÉTODOS PARA ARRAYS
+                //---------------------->
+
+
+            var vocales= ["a","e","i","o","u"];
+            document.write("<br><br><br><br>NUMERO DE VOCALES ----> "+vocales.length);      //SACA EL NUMERO DE ELEMENTOS DEL ARRAY
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            var arrayCade=["A","las","muy","buenas"];
+            document.write("<br><br><br><br>"+vocales.concat(arrayCade));            //UNE O JUNTA DOS ARRAYS
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            var arrayCero= [];
+            arrayCero.push("Hola");
+            arrayCero.push("que");                    //AGREGA VALORES AL ARRAY
+            arrayCero.push("tal?");
+
+            document.write("<br><br>"+arrayCero);
+            document.write("<br><br>"+arrayCero[0]);
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            arrayCero.shift();
+            document.write("<br><br><br><br>"+arrayCero);        //ELIMINAMOS EL PRIMER ELEMENTO DEL ARRAY
+
+
+            arrayCero.pop();
+            document.write("<br>"+arrayCero);                   //ELIMINAMOS EL ULTIMO ELEMENTO DEL ARRAY
+
+
+            arrayCero.unshift("Buenas","BEBE");                  //AÑADE UNO O MAS ELEMENTO AL PRINCIPIO DEL ARRAY
+            document.write("<br>"+arrayCero);
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            var arrayUno=["Buenas","tardes","como","estamos?"];      //COMO SI CADA POSICION FUERA LA 1 - 2 - 3 - 4
+          //arrayUno.splice(2);                             //DEJA LA POSICION 1 Y 2 DE ARRAY. ELIMINA LA POSICION 3 Y 4
+          //arrayUno.splice(1,2);                           //DEJA LA POSICION 1 Y 4 DEL ARRAY. ELIMINA LA POSICION 2 Y 3
+          //arrayUno.splice(1,1);                           //DEJA LA POSICION 1, 3 Y 4 DEL ARRAY. ELIMINA LA POSICION 2
+          //arrayUno.splice(2,2);                           //DEJA LA POSICION 1 Y 2 DEL ARRAY. ELIMINA LA POSICION 3 Y 4
+            arrayUno.splice(3);                             //DEJA LA POSICION 1, 2 Y 3 DEL ARRAY. ELIMINA LA POSICION 4
+            document.write("<br><br><br><br>"+arrayUno);
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            var arrayDos=[1,2,3,4,5,6,7,8,9,10,11,12];
+            document.write("<br><br><br><br>"+arrayDos);
+            document.write("<br>"+arrayDos.join(" "));        //QUITA LAS COMAS DEL ARRAY
+            document.write("<br>"+arrayDos.join(""));         //QUITA LAS COMAS Y ESPACIOS DEL ARRAY
+            document.write("<br>"+arrayDos.join("-"));        //QUITA LAS COMAS Y ESPACIOS Y PONE - ENTRE NUMERO Y NUMERO
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            var arrayTres=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+            document.write("<br><br><br><br>"+arrayTres.reverse());      //PONE EL ARRAY AL REVES ----> 15, 14, 13, 12, 11, 10, 9, 8, 7...1
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            var arrayCuatro= new Array(4);
+            var arrayCinco= new Array("Rojo","Verde","Blanco","Azul","Violeta");
+
+            document.write("<br><br><br><br>"+arrayCuatro.fill(10));              //PONE _TODO_ EL ARRAY DE 10
+            document.write("<br>"+arrayCinco.fill("verde",1));                    //PONE EL ARRAY DESDE VERDE HASTA EL FINAL DE VERDE
+            document.write("<br>"+arrayCinco.fill(2,2));                          //PONE EL ARRAY DESDE BLANCO HASTA EL FINAL DE 2
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            var colores= ["Rojo","Azul","Blanco","Rojo"];
+
+            document.write("<br><br><br><br>"+colores.indexOf("Rojo"));            //SACA LA POSICION EN LA QUE ESTA EL RPIMER COLOR ROJO
+            document.write("<br>"+colores.indexOf("Rojo",1));                      //SACA LA POSICION EN LA QUE ESTA EL PRIMER COLOR ROJO
+                                                                                   //A PARTIR DE LA POSICION 1 DEL ARRAY
+
+            document.write("<br>"+colores.indexOf("Verde"));                       //SI NO ESTA DA -1
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            document.write("<br><br><br><br>"+colores.lastIndexOf("Rojo"));         //SACA LA POSICION EN LA QUE ESTA EL ULTIMO COLOR ROJO
+            document.write("<br>"+colores.lastIndexOf("Rojo",2));                   //SACA LA POSICION EN LA QUE ESTA EL PRIMER COLOR ROJO
+                                                                                    //A PARTIR DE LA POSICION 2 DEL ARRAY
+
+            document.write("<br>"+colores.lastIndexOf("Verde"));                    //SI NO ESTA DA -1
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

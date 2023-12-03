@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+        //BUCLE FOR ----> FOR (INICIO DEL BUCLE; FINALIZACION DEL BUCLE; INCREMENTO O DECREMENTO) {
+        //                        SENTENCIAS
+        //                  }
+        //--------------------------------------------------------------------------------------------->
+
+
+
+
+        for(var i=1;i<6;i++) {            //VAS DE 1 HASTA 5 Y INCREMENTAS DE 1 EN 1
+
+            document.write(i);
+        }
+
+
+
+            document.write("<br><br><br><br>");
+
+
+
+        for(var k=5;k>0;k--) {            //VAS DE 5 HASTA 1 Y DECREMENTAS DE 1 EN 1
+            document.write(k);
+        }
+
+
+
+            document.write("<br><br><br><br>");
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+          var mensaje= "HOLA, ESTOY DENTRO DE UN BUCLE DANDO MUCHAS VUELTAS. ME VOY A MAREAR";
+
+
+          for(var i=0;i<5;i++){                //VA DE 0 HASTA 4 Y INCREMENTA DE 1 EN 1
+            document.write("<br>"+i+"----> "+mensaje);
+          }
+
+
+
+
+
+          document.write("<br><br><br><br>");
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+          for(var i=100;i>=10;i-=10) {          //EMPIEZAS EN 100 Y VAS HASTA EL 10 DECREMENTANDO DE 10 EN 10
+			        document.write(i+ "/");
+	      	}
+
+
+
+
+          document.write("<br><br><br><br>");
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+              var cont1= 0;
+	          	var cont2= 0;
+	            var sum= 0;                        //TRES CONTADORES
+
+
+		          for(var i=0;i<10;i++) {
+		                  	edad= prompt("INTRODUCE LA EDAD DE 10 PERSONAS...");
+			                  edad= parseInt(edad);      //PASAMOS LAS EDADES DE ENTEROS
+
+	                      sum= sum+edad;             //SUMAMOS TODAS LAS EDADES
+
+			                  if(edad>=18) {             //SI EDAD ES MAYOR O IGUAL QUE 18 ENTRAS
+			                        	cont1++;
+			                  } else {
+			                        	cont2++;
+			                  }
+		          }
+
+
+		          var media=(sum/(cont1+cont2));       //PARA LA MEDIA COGEMSO AL SUMA DE TODAS LA EDADES ENTRE EN NUMERO DE EDADES METIDAS
+
+
+	          	document.write("<br>LA SUMA DE TODAS LA EDADES ES..."+sum);
+	          	document.write("<br>MAYORES DE EDAD..."+cont1);
+	          	document.write("<br>MENORES ED EDAD..."+cont2);
+	           	document.write("<br>LA MEDIA DE TODAS LAS EDADES ES..."+media);
+
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

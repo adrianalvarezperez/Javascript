@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+                  //IMPRIMIMOS MATRIZ CON NUMEROS ALEATORIOS Y CON NUMERO DE COLUMNAS PASADAS POR PARAMETROS
+                  //----------------------------------------------------------------------------------------->
+
+
+                  var datos= new Array(5);
+                  for(var i=0;i<datos.length;i++){                 //MATRIZ DE 5 FILAS
+                        datos[i]= new Array();                    //MATRIZ VACIO DE COLUMNAS
+                  }
+
+
+                  var num= new Array(5);                            //ARRAY CON 5 POSICIONES
+
+//---------------------------------------------------------------------------------------------------->
+
+                  for(var i=0;i<num.length;i++){
+                        var num2= prompt("INTRODUCE UN NUMERO...");      //GUARDAMOS EN EL ARRAY "NUM", LOS NUMEROS INTRODUCIDOS
+                        num2= parseInt(num2);
+                        num[i]= num2;
+                  }
+
+
+
+
+                  datos[0]= new Array(num[0]);
+                  datos[1]= new Array(num[1]);
+                  datos[2]= new Array(num[2]);         //GUARDAMOS EN LAS 5 FILAS DE LA MATRIZ "DATOS" LOS NUMEROS INTRODUCIDOS DEL ARRAY "NUM"
+                  datos[3]= new Array(num[3]);         //CON ESTO CREAMOS LAS COLUMNAS DE LAS MATRIZ
+                  datos[4]= new Array(num[4]);
+
+
+
+                  for(var i=0;i<datos.length;i++){
+                      for(var j=0;j<datos[i].length;j++){
+                          datos[i][j]= Math.floor(Math.random()*9+0);   //IMPRIMOS LA MATRIZ CON NUMEROS ALEATORIOS DE 5 FILAS Y LAS COLUMNAS
+                          document.write(datos[i][j]);                  //CON NUMEROS ALEATORIOS DE X COLUMNAS QUE LE PASEMOS
+                      }
+                      document.write("<br>");                          //PARA QUE SALTE DE LINEA EN CADA PASADA
+                  }
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

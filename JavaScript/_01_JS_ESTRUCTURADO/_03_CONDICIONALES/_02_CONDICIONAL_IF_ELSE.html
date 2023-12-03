@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+        //CONDICIONAL IF_ELSE  --  SI ES CIERTO COGE EL IF DE LO CONTRARIO COGE EL ELSE
+        //------------------------------------------------------------------------------->
+
+
+        var nombre = "";          //STRING VACIO
+
+
+        if(nombre == "") {        //SI LA VARIABLE NOMBRE ES IGUAL A STRING VACIO ENTRA LA PRIMERA ALERTA
+          alert("¿Cuál es tu nombre de pila");
+        } else {                  //DE LO CONTRARIO ENTRAS A LA SEGUNDA ALERTA
+          alert("Hemos guardado tu nombre respetando la LPD");
+        }
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+        var cont1= 0;
+		    var cont2= -1;
+
+
+		    do {
+			      cont1++;                    //ESTO SOLO CUENTA PARA FINALIZAR EL BUCLE EN 10 PASADAS
+			      cont2= -cont2;							//PASA DE POSITIVO A NEGATIVO  //CONT2 VALE 1 Y A LA PASADA SIGUIENTE -1 Y ASÍ HASTA ACABAR EL BUCLE
+
+			      if(cont2==1) {							//SI CONT2 ES IGUAL A 1
+				      alert("HOLA");
+			      } else {
+				      alert("ADIOS");
+			      }
+		    } while(cont1<10);
+
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+        var ale= Math.floor(Math.random()*10+1);              //GUARDAMOS EN "ALE" UN NUMERO ALEATORIO
+
+
+        if(ale>5){                                            //SI EL NUMERO ALEATORIO ES  > MAYOR QUE 5
+            document.write("HOY SERA UN MAL DÍA..."+ale);
+        } else {
+            document.write("HOY SERA UN GRAN DÍA..."+ale);
+        }
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+          //NUMERO PAR O IMPAR
+
+          function parImpar(numero) {
+              if(numero % 2 == 0) {
+                  return "par";
+              } else {
+                  return "impar";
+              }
+          }
+
+
+        var numero = prompt("Introduce un número entero");
+
+        var resultado = parImpar(numero);
+        document.write("El número "+numero+" es "+resultado);
+
+
+        }
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

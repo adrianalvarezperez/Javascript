@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+                //BUCLE DO_WHILE  ---->  SE EJECUTA MINIMO UNA VEZ, MAXIMO INFINITAS
+                //-------------------------------------------------------------------->
+
+
+
+
+
+              var i= 0;                         //CONTADOR INICIADO A 0
+
+
+              do{
+
+                  i++;                           //CUENTAS LAS VECES QUE HACE EL BUCLE
+                  document.write(i+"<br>");      //EN CADA PASADA IMPRIME EN EL CUERPO DEL HTML
+
+              } while(i<5);                     //SE SALE DEL BUCLE CUANDO HAGA 5 VUELTAS
+
+
+
+              document.write("<br><br>");
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                var resultado= 1;
+                var num= 5;                                //DOS CONTADORES
+
+
+                do{
+
+                    resultado*= num;                      //EN CADA PASADA "RESULTADO" QUE ES 1 GUARDA UN NUMERO DIFERENTE AL MULTIPLICAR
+                    document.write("<br>" +resultado);
+                    num--;                                //EN CADA PASADA EL 5 DECREMENTA EN 1
+
+                } while(num > 0);                        //HASTA LLEGAR A 0. HAY SE SALE
+
+
+                document.write("<br>EL RESULTADO ES ----> " +resultado+"<br><br><br><br>");
+
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+                var c= -1;                                            //-1 PARA QUE NO CUENTE EL 7
+                var ale;
+
+
+                do{
+
+                      c++;
+                      ale= Math.floor(Math.random()*10+1);            //NUMERO ALEATORIO
+                      document.write(ale+"<br>");
+
+                } while(ale!=7);                                      //MIENTRAS ALE SERA DISTINTO DE 7 ESTA EN BUCLE. SI SALE 7 SALE DEL BUCLE
+
+
+                document.write("SE ACABO. PARA LLEGAR AL 7 HA PASADO POR " +c+ " NUMEROS.<br><br><br><br>");
+
+
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+                            //PENSAR COMO SACAR LA MEDIA DEL QUE MAS SALE Y EN CASO DE EMPATE SACAR LOS DOS
+
+
+                var ale2;
+                var cont= 10;
+
+                do{
+                      ale2= Math.floor(Math.random()*5+1);          //GENERAMOS NUMERO ALEATORIO ENTRE 5 Y 1
+
+                      switch(ale2){
+                            case 1: document.write("<br>NO TENDRAS SUERTE EN TODA LA SEMANA");break;
+                            case 2: document.write("<br>HOY NO TENDRAS SUERTE");break;
+                            case 3: document.write("<br>PUEDES TENER SUERTE, COMO NO TENER SUERTE");break;
+                            case 4: document.write("<br>HOY TENDRAS SUERTE");break;
+                            case 5: document.write("<br>TENDRAS SUERTE TODA LA SEMANA");break;
+                      }
+                      cont--;
+
+                } while(cont>0);                    //MIENTRAS CONT SEA > QUE 0 ESTA EN BUCLE
+
+
+
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+              //ACERTA NUMERO DEL 1 AL 100
+              //-------------------------->
+
+
+              var ale= Math.floor(Math.random()*100+1);
+	          	var num;
+
+	          	do {
+			              num= prompt("INTRODUCE UN NUMERO DEL 1 AL 100...");
+			              num= parseInt(num);
+
+			              if(ale > num) {
+				                    alert("MAYOR");
+			              } if(ale < num){
+                            alert("MENOR");
+                    } if(ale == num) {
+				                    alert("HAS ACERTADO.");
+			              }
+
+		          } while(ale!=num);            //MIENTRAS ALE SEA DISTINTO QUE NUM ESTA EN BUCLE. CUANDO ALE SEA IGUAL QUE NUM SE SALE.
+
+
+		          document.write("<br><br>ENORABUENA ESTE ES EL NUMERO CORRECTO --------> "+ale);
+
+
+
+
+              document.write("<br><br><br><br>")
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+            //MAXIMO__MINIMO__MEDIA__SUMA DE TODOS LOS NUMEROS
+            //------------------------------------------------>
+
+
+            var num;
+		        var media=0;
+		        var cont=0;
+		        var suma=0;
+		        var min= 2147483647;
+		        var max=0;
+
+
+		        do {
+			            num= prompt("INTRODUCE UN NUMERO HASTA QUE TECLEES EL 0");
+		            	num= parseInt(num);
+
+			            if(num>0) {
+				              if(num>max) {
+				            	    max=num;
+			          	    }
+				              if(num<min) {
+					                min=num;
+				              }
+				              if(num>0) {
+					                suma= suma+num;
+					                cont++;
+					                media=suma/cont;
+                      }
+			             }
+
+		         } while(num>0);                  //MIENTRAS QUE NUM SEA MAYOR QUE 0 ESTA EN BUCLE. CUANDO LLEGUE E 0 SE SALE
+
+
+          		document.write("<br>EL NUMERO MAXIMO INTRODUCIDO ES "+max);
+		          document.write("<br>EL NUMERO MINIMO INTRODUCIDO ES "+min);
+		          document.write("<br>LA MEDIA DE TODOS LOS NUMEROS ES "+media);
+		          document.write("<br>LA SUMA DE TODOS LOS NUMEROS ES "+suma);
+
+
+
+
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

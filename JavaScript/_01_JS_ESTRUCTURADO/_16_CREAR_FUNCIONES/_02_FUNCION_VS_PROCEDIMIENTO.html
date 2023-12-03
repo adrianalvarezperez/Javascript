@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+
+
+                var n1= prompt("INTRODUCE UN NUMERO...");                  //VARIABLES GLOBALES PORQUE ESTAN FUERA DE LA FUNCION
+                n1= parseInt(n1);
+
+                var n2= prompt("INTRODUCE OTRO NUMERO...");
+                n2= parseInt(n2);
+
+
+//---------------------------------------------------------------------------------------->
+
+
+                suma1(n1,n2);                                  //LLAMAMOS AL PROCEDIMIENTO
+                document.write(suma2(n1,n2)+"<br>");          //LLAMAMOS A LA FUNCION
+
+
+//---------------------------------------------------------------------------------------->
+
+
+                function suma1(n1, n2){                //FUNCION SIN RETORNO  ---->  PROCEDIMIENTO
+                    var result= n1+n2;
+                    document.write(result+"<br>");
+                }
+
+
+
+
+                function suma2(n1, n2){              //FUNCION CON RETORNO  ---->  FUNCION
+                    var result=n1+n2;
+                    return result;
+                }
+
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

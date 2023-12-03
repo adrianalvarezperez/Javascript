@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+            //CONDICIONAL IF  --  SI ES CIERTO ENTRA, SI NO SALE
+            //--------------------------------------------------->
+
+            var mensaje = true;
+            var mostrarMensaje = false;
+
+
+
+            //MENSAJE ES TRUE ----> ENTRA A LA ALERTA
+            if(mensaje) {
+              alert("¡¡Hola usuario!!");
+            }
+
+
+
+
+            //SE COMPARAN LOS DOS VALORES ----> ENTRA PORQUE LOS DOS SON IGUALES
+            if(mostrarMensaje == false) {
+              alert("SON IGUALES");
+            }
+
+
+
+
+            //ERROR - SE ASIGNA EL VALOR "FALSE" A LA VARIABLE ----> NO ENTRA
+            if(mostrarMensaje = false) {
+              alert("NI IDEA");
+            }
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            var mostrando = false;
+            var permiteMensajes = true;
+
+            //TRUE Y TRUE ----> ENTRA AL MENSAJE
+            if(!mostrando && permiteMensajes) {
+              alert("¡¡Es la primera vez que se muestra el mensaje al nuevo usuario!!");
+            }
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            var num;
+            var sum= 0;        //CONTADOR INICIADO A 0. EMPIEZA A CONTAR DESDE 0
+
+
+
+
+            do{
+              num= prompt("INTRODUCE VARIOS NUMEROS...");
+              num=parseInt(num);
+
+              if(num>=0) {            //SI LA CONDICION ES CIERTA ENTRA AL IF
+                sum= sum+num;        //SUMA TODOS LOS NUMEROS QUE INTRODUZCAS ----> 20 - 12 - 5 - 1 - 8 = 46
+                                    //0= 0 + 20   otra vuelta   20= 20 + 12    otra vuelta   32= 32 + 5      otra vuelta    37= 37 + 1 ......
+              }
+
+            } while(num>=0);        //LA CONDICION TIENE QUE SER CIERTA PARA QUE SIGA EN BUCLE. CON UN -1 SALE
+
+            alert("LA SUMA DE TODOS LOS NUMEROS INTRODUCIDOS ES ----> " +sum);
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            var edad;
+            var cont1= 0;
+            var cont2= 0;
+            var sum= 0;
+
+
+
+
+            do{
+                edad= prompt("INTRODUCE VARIAS EDADES...");
+                edad= parseInt(edad);
+
+
+                if(edad>=18){
+                  cont1++;                    //CONTADOR DE MAYORES
+                }
+
+
+                if(edad<18 && edad>=0){
+                  cont2++;                   //CONTADOR DE MENORES
+                }
+
+
+                if(edad>=0){                //LA CONDICION ES QUE SUME TODAS LAS EDADES INTRODUCIDAS
+                  sum= sum + edad;          //SUMA DE TODOS LOS NUMEROS INTRODUCIDOS ----> 20 - 12 - 5 - 1 - 8 = 46
+                }
+
+
+            } while(edad>=0);              //CON -1 SALIMOS DEL BUCLE
+
+
+            var media= sum/(cont1 + cont2);    //LA MEDIA DE TODAS LAS EDADES.
+                                               //METEMOS LA SUMA DEL DE TODAS LAS EDADES / EL NUMERO TOTAL DE PERSONAS INTRODUCIDAS
+
+
+            alert(cont1+ "...MAYORES DE EDAD.");
+            alert(cont2+ "...MENORES DE EDAD.");
+            alert("LA SUMA DE TODAS LAS EDADES ES..." +sum);
+            alert("LA MEDIA DE TODAS LAS EDADES ES..."+media);
+
+
+            document.write(cont1+ "...MAYORES DE EDAD.");
+            document.write("<br>" +cont2+ "...MENORES DE EDAD.");
+            document.write("<br>LA SUMA DE TODAS LAS EDADES ES..." +sum);
+            document.write("<br>LA MEDIA DE TODAS LAS EDADES ES..."+media);
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            var edad;
+
+		          do {
+			            edad= prompt("INTRODUCE UNA EDAD...");
+			            edad= parseInt(edad);
+
+                  if(edad<12 && edad>=0) {
+                    alert("ES MENOR DE EDAD ----> NIÑO\n\n");
+                  }
+                  if(edad<18 && edad>=12) {
+                    alert("ES MENOR DE EDAD ----> ADOLESCENTE\n\n");
+                  }
+			            if(edad>=18 && edad<=31) {
+				            alert("ES MAYOR DE EDAD ----> JOVEN\n\n");
+			            }
+                  if(edad<65 && edad>=32) {
+				            alert("ADULTO\n\n");
+			            }
+                  if(edad>=65){
+                    alert("JUBILADO");
+                  }
+		          } while(edad>=0);                  //SALIMOS DEL BUCLE CON -1
+
+
+		          alert("SE ACABO...ADIOS");
+
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

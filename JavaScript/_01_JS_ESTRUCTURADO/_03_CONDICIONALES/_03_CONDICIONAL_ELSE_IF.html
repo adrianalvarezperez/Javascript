@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+
+        //CONDICIONAL ELSE_IF  --  DE TODAS LAS CONDICIONES COGE LA CIERTA
+        //----------------------------------------------------------------->
+
+
+        var edad;
+
+        do {
+            edad= prompt("INTRODUCE UNA EDAD...");
+            edad= parseInt(edad);
+
+
+            if(edad>=0 && edad<13) {
+              alert("INFANTIL\n");
+            } else if(edad>=13 && edad<18) {
+              alert("ADOLESCENTE\n");
+            } else if(edad>=18 && edad<40) {
+              alert("JOVEN MAYOR DE EDAD\n");
+            } else if(edad>=40 && edad<65) {
+              alert("ADULTO MAYOR DE EDAD\n");
+            } else if(edad>=65) {
+              alert("JUBILADO\n");
+            }
+
+        } while(edad>=0);
+
+
+        alert("SE ACABO. ADIOS");
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

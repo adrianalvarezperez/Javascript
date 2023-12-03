@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+  <script type="text/javascript">
+
+
+            //EL METODO BURBUJA SIRVE PARA "ORDENAR" STRING POR ORDEN ALFABETICO
+            //------------------------------------------------------------------->
+
+
+            var nombre= ["Pepe","Juan","Luis","Alicia","Rosa","Carlos","Pedro","Lucas","Maria","Carlota"];    //CREAMOS ARRAY
+
+
+            //METODO BURBUJA ORDENA NOMBRES DEL ARRAY
+            for(var i=0; i<nombre.length; i++){
+                for(var j=0; j<nombre.length-1;j++){
+
+                    if(nombre[i].localeCompare(nombre[j],'es', {sensitivity:'base'})<0){    //CON EL CERO ES DE MENOS A MAYOR
+                          var aux= nombre[i];
+                          nombre[i]= nombre[j];
+                          nombre[j]= aux;
+                    }
+                }
+            }
+
+
+            //IMPRIMOS EL ARRAY ORDENADO
+            for(var i=0;i<nombre.length;i++){
+                document.write(nombre[i]);
+            }
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

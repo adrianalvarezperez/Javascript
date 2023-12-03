@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+
+          var nombre= new Array(8);
+          for(var i=0;i<nombre.length;i++){                           //FILAS
+              nombre[i]= new Array(6);                                //COLUMNAS
+          }
+
+
+          for(var i=0;i<nombre.length;i++){
+              for(var j=0;j<nombre[i].length;j++){
+                if(i==0 || i==7){
+                  nombre[i][j]= 1;
+                }
+                if(j==0 || j==5){
+                  nombre[i][j]= 1;
+                }
+              }
+          }
+
+
+          for(var i=0;i<nombre.length;i++){
+              document.write("<br>");
+              for(var j=0;j<nombre[i].length;j++){
+                document.write(nombre[i][j]);
+              }
+          }
+
+
+            document.write("<br>");
+
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
