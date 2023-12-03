@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="CSS/Requerimiento 01.css">
+  <script type="text/javascript" src="JS/Requerimiento 01.js"></script>
+</head>
+<body bgcolor="grey" onload="ponerFoco()">
+
+
+<div class="contenedor">
+
+
+
+      <h1>EXÁMEN ONLINE TIPO TEST 2ºDAW EDIX</h1><br>
+
+
+      <form  name="formu" class="" action="" method="post">
+
+
+              <fieldset>
+                        <legend class="">DATOS PERSONALES DEL ALUMNO</legend>
+                        <input type="text" name="nombre" id="nombre" value="" placeholder="Nombre" size="15" ><br><br>
+                        <input type="text" name="ape" id="ape" value="" placeholder="Apellidos" ><br><br>
+                        <input type="text" name="dni" id="dni" value="" placeholder="DNI" ><br><br>
+                        <input type="text" name="dir" id="dir" value="" placeholder="Direccion" size="40"><br><br>
+                        <input type="tel" name="tlfn" id="tlfn" value="" placeholder="Telefono"> <br><br>
+                        <select class="provin" name="pro" id="pro">
+                                    <option value="" disabled selected>Provincia</option>    <!--LO DEJAMOS SIN VALUE PARA QUE EN EL ELSE IF DE JAVASCRIPT NO LO ENCUENTRE-->
+                                    <option value="opcion1">Álava</option>
+                                    <option value="opcion2">Albacete</option>
+                                    <option value="opcion3">Alicante</option>
+                                    <option value="opcion4">Almería</option>
+                                    <option value="opcion5">Asturias</option>
+                                    <option value="opcion6">Ávila</option>
+                                    <option value="opcion7">Badajoz</option>
+                                    <option value="opcion8">Barcelona</option>
+                                    <option value="opcion9">Burgos</option>
+                                    <option value="opcion10">Cáceres</option>
+                                    <option value="opcion11">Cádiz</option>
+                                    <option value="opcion12">Cantabria</option>
+                                    <option value="opcion13">Castellón</option>
+                                    <option value="opcion14">Cuidad Real</option>
+                                    <option value="opcion15">Cuenca</option>
+                                    <option value="opcion16">Córdoba</option>
+                                    <option value="opcion17">Gerona</option>
+                                    <option value="opcion18">Granada</option>
+                                    <option value="opcion19">Guadalajara</option>
+                                    <option value="opcion20">Guipúzcoa</option>
+                                    <option value="opcion21">Huelva</option>
+                                    <option value="opcion22">Huesca</option>
+                                    <option value="opcion23">Islas Baleares</option>
+                                    <option value="opcion24">Jaén</option>
+                                    <option value="opcion25">La Coruña</option>
+                                    <option value="opcion26">La Rioja</option>
+                                    <option value="opcion27">Las Palmas</option>
+                                    <option value="opcion28">León</option>
+                                    <option value="opcion29">Lérida</option>
+                                    <option value="opcion30">Lugo</option>
+                                    <option value="opcion31">Madrid</option>
+                                    <option value="opcion32">Málaga</option>
+                                    <option value="opcion33">Murcia</option>
+                                    <option value="opcion34">Navarra</option>
+                                    <option value="opcion35">Orense</option>
+                                    <option value="opcion36">Palencia</option>
+                                    <option value="opcion37">Pontevedra</option>
+                                    <option value="opcion38">Salamanca</option>
+                                    <option value="opcion39">Segovia</option>
+                                    <option value="opcion40">Sevilla</option>
+                                    <option value="opcion41">Soria</option>
+                                    <option value="opcion42">Tarragona</option>
+                                    <option value="opcion43">Tenerife</option>
+                                    <option value="opcion44">Teruel</option>
+                                    <option value="opcion45">Toledo</option>
+                                    <option value="opcion46">Valencia</option>
+                                    <option value="opcion47">Valladolid</option>
+                                    <option value="opcion48">Vizcaya</option>
+                                    <option value="opcion49">Zamora</option>
+                                    <option value="opcion50">Zaragoza</option>
+                          </select> *Provincia desde donde va a realizar el examen<br><br>
+
+
+
+
+              </fieldset><br><br>
+
+
+              <fieldset>
+                      <legend class=""><h4>EXAMEN (*Solo una es correcta)</h4></legend>
+                      <h5>1º. ¿Cómo enlazamos un archivo CSS a nuestro documento HTML?</h5>
+                      <input type="radio" name="opc1" id="uno">a. Con la etiqueta div.<br><br>
+                      <input type="radio" name="opc1" id="dos">b. Usando la etiqueta link desde la cabezera de cada documento.<br><br>
+                      <input type="radio" name="opc1" id="tres">c. Con la etiqueta a href <br><br>
+                      <input type="radio" name="opc1" id="cuatro">d. Usando la etiqueta script<br><br>
+
+
+                      <h5>2º. ¿Con que extensión guardamos nuestra hoja de estilos?</h5>
+                      <input type="radio" name="opc2" id="cinco">a. .style<br><br>
+                      <input type="radio" name="opc2" id="seis">b. .css <br><br>
+                      <input type="radio" name="opc2" id="siete">c. .cs<br><br>
+                      <input type="radio" name="opc2" id="ocho">d. .link<br><br>
+              </fieldset><br><br>
+
+
+              <fieldset>
+                      <legend class=""><h4>¿QUÉ VALORACIÓN DAS A HACER UN EXAMEN ONLINE?</h4></legend>
+
+
+                      <input type="checkbox" name="enc" id="nueve" value="">Muy mala
+                      <input type="checkbox" name="enc" id="diez" value="">Mala
+                      <input type="checkbox" name="enc" id="once" value="">Mediocre
+                      <input type="checkbox" name="enc" id="doce" value="">Buena
+                      <input type="checkbox" name="enc" id="trece" value="">Muy buena <br><br>
+                      <textarea name="name" rows="8" id="catorce" cols="50" placeholder="Escribe aquí un comentario"></textarea>
+              </fieldset><br><br>
+
+
+
+                      <input type="button" name="envio" id="envio" value="Enviar examen" onclick="validarForm()"><img src="IMG/true.png"class="tam">
+                      <input type="reset" class="res" name="borrar" value="Borrar examen"><img src="IMG/false.png"class="tam2"><br><br>
+
+                      <div class="" name="contenedor" id="contenedor">
+
+                      </div>
+
+
+      </form>
+
+
+</div>
+
+
+
+</body>
+</html>
